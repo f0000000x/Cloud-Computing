@@ -97,6 +97,8 @@ sudo apt-get install -y python3-seaborn
 sudo pip3 install --upgrade pip
 sudo pip3 install --upgrade tensorflow-gpu
 sudo pip3 install pandas --upgrade
+sudo pip3 install --upgrade numexpr
+sudo pip3 install --upgrade numpy
 sudo pip3 install Theano 
 sudo pip3 install keras
 sudo pip3 install protobuf
