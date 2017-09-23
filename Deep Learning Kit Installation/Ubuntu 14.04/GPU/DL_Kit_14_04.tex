@@ -1,0 +1,335 @@
+\documentclass[12pt]{article}
+%\usepackage[pass,letterpaper]{geometry}              %This package needs to be enaled when dvi--->ps----->PDF
+\usepackage{stmaryrd, amsfonts, mathptmx, mathtools, array, siunitx, subfigure, graphicx, listings, etoolbox, mdwlist, xcolor }
+\usepackage{multirow, indentfirst, cite, verbatim, keyval, textcomp, enumerate, calc, microtype, color,marvosym, enumitem}
+\usepackage[export]{adjustbox}
+\usepackage[obeyspaces]{url}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+\lstdefinestyle{DOS}
+{
+    backgroundcolor=\color{black},
+    basicstyle=\scriptsize\color{white}\ttfamily
+}
+
+
+
+\usepackage[colorlinks,linktocpage,dvips]{hyperref}
+\hypersetup{
+   colorlinks   = true,                               %Colours links instead of ugly boxes
+   urlcolor     = blue,                               %Colour for external hyper links
+   linkcolor    = blue,                               %Colour of internal links
+   citecolor    = red,                                %Colour of citations
+   setpagesize  = false,
+   linktocpage  = true,
+}
+
+\makeatletter
+\patchcmd{\l@section}
+  {\hfil}
+  {\leaders\hbox{\normalfont$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill}
+  {}{}
+\makeatother
+\definecolor{anti-flashwhite}{rgb}{0.95, 0.95, 0.96}
+\lstset{
+backgroundcolor=\color{anti-flashwhite},
+basicstyle=\small\ttfamily,
+columns=flexible,
+breaklines=true
+}
+
+
+\newcommand{\shellcmd}[1]{\\\indent\indent\texttt{\footnotesize\$ #1}\\}
+\parskip 0.5em
+\parindent 2em
+\setlength{\textwidth}{6.0in} \setlength{\textheight}{8.8in}
+\setlength{\topmargin}{0.4in} \setlength{\headheight}{0.0in}
+\setlength{\headsep}{0.0in} \setlength{\oddsidemargin}{0.25in}
+\setlength{\parindent}{.2in}
+%\renewcommand{\baselinestretch}{1.5}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{1em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\textbf{Google Cloud Deep Learning Kit\\ Ubuntu 14.04 \\ Software Installation\\ GPU }}%
+
+\author{Data Science Program, GWU, USA \\
+School of Electrical and Computer Engineering, OSU, USA\\
+\vspace{1cm}\\
+\Letter : martin.t.hagan@okstate.edu\\
+\Letter : ajafari@gwu.edu\\
+\Letter : amir.h.jafari@okstate.edu  }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{figure}
+\centering \includegraphics[width=2in, height=1in]{fig/GW_logo.eps}\hfill
+\centering \includegraphics[width=1in, height=1in]{fig/logo1.eps}\hfill
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+%\listoffigures
+%\newpage
+%\listoftables
+% \newpage
+%\lstlistoflistings
+% \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Manual installation}
+\subsection{Chromium}
+
+\begin{enumerate}
+  \item Log in to your google cloud console.
+  \item Choose compute engine and create an instance.
+  \item Customize the VM and get an instance with 1 GPU.
+  \item Set up your SSH key and then create instance.
+  \item After the instance is created you can log in couple of ways, SSH browser, Terminal or MobaXterm.
+  \item In this tutorial we used MobaXterm.
+  \item Now you setup your MobaXterm and use the external IP address as host and your username that you set up for public key.
+  \item Log in to your Linux terminal and lets install chromium. Click on the hyperlink below and enter all the commands in the not Notepad one by one.
+\end{enumerate}
+
+
+\begin{center}
+\href{run:./Text_Files_14/Chrome.txt}{\Large Chromium}
+\end{center}
+
+\subsection{CUDA 8.0 and CUDA-Toolkit}
+\begin{enumerate}[resume]
+  \item Open your chromium browser in VM by chromium in terminal.
+  \item Lets log in to Nvidia developer  \href{https://developer.nvidia.com/cuda-downloads}{website}
+  \item Choose Linux, x86\_64, Ubuntu, 14.04 and click on debfile.
+  \item Download the deb file and its patch.
+  \item Click on the hyperlink below and enter all the commands in the not Notepad one by one.
+\end{enumerate}
+
+\begin{center}
+\href{run:./Text_Files_14/Cuda.txt}{\Large CUDA}
+\end{center}
+
+\begin{enumerate}[resume]
+  \item Once nano is open edit the PATH variable to include /usr/local/cuda-8.0/bin folder.
+  \item It should be like this:
+  \item  {\scriptsize PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/cuda-8.0/bin"}
+  \item After editing this line press Ctrl + X to exit the editor and press Y when prompted whether you want to save it.
+  \item Click on the hyperlink below and enter all the commands in the not Notepad one by one.
+\end{enumerate}
+
+\begin{center}
+\href{run:./Text_Files_14/Cuda1.txt}{\Large CUDA-Continue}
+\end{center}
+
+
+%\subsection{CUDA Toolkit}
+%\begin{enumerate}[resume]
+%  \item After Successful installation of CUDA 8.0 we need to install nvidia toolkit.
+%  \item Click on the hyperlink below and enter all the commands in the not Notepad one by one.
+%\end{enumerate}
+%
+%
+%\begin{center}
+%\href{run:./Text_Files_14/Cuda_toolkit.txt}{\Large Cuda Toolkit}
+%\end{center}
+
+\subsection{cuDNN 6.0}
+
+\begin{enumerate}[resume]
+  \item Now, we need to install cuDNN to complete the GPU installation build for frameworks.
+  \item Open your chromium browser in VM by typing chromium in terminal.
+  \item Lets log in to Nvidia developer  \href{https://developer.nvidia.com/rdp/cudnn-download}{website}.
+  \item Next, download the cuDNN 6.0 for Cuda 8.0 for ubuntu 14.04 (cuDNN v6.0 Library for Linux).
+  \item Click on the hyperlink below and enter all the commands in the not Notepad one by one.
+\end{enumerate}
+
+\begin{center}
+\href{run:./Text_Files_14/cuDNN.txt}{\Large cuDNN}
+\end{center}
+
+\subsection{Phyton 2.7}
+
+\begin{enumerate}[resume]
+  \item Install Python 2.7
+\end{enumerate}
+
+\begin{center}
+\href{run:./Text_Files_14/Python2.txt}{\Large Python2.7}
+\end{center}
+
+\subsection{Phyton 3.5}
+
+\begin{enumerate}[resume]
+  \item Install Python 3
+\end{enumerate}
+
+\begin{center}
+\href{run:./Text_Files_14/Python3.txt}{\Large Python3}
+\end{center}
+
+
+
+\subsection{Additional Python Packages}
+
+\begin{enumerate}[resume]
+  \item Install Additional python packages.
+\end{enumerate}
+
+\begin{center}
+\href{run:./Text_Files_14/AdPP.txt}{\Large Additional python packages}
+\end{center}
+
+\subsection{Pycharm}
+
+\begin{enumerate}[resume]
+  \item Open your chromium browser in VM by typing chromium in terminal.
+  \item Lets log   \href{http://ppa.launchpad.net/mystic-mirage/pycharm/ubuntu/pool/main/p/pycharm/}{website}.
+  \item Download pycharm-community\_2016.3\~mm1\_all.deb file.	
+  \item Click on the hyperlink below and enter all the commands in the not Notepad one by one.
+\end{enumerate}
+
+\begin{center}
+\href{run:./Text_Files_14/Pycharm.txt}{\Large Pycharm}
+\end{center}
+
+\begin{enumerate}[resume]
+  \item You can run the editor by entering pycharm-community.
+\end{enumerate}
+
+\subsection{Deep Learning Frameworks}
+
+\subsubsection{Torch and ZeroBraneStudio}
+
+\begin{enumerate}[resume]
+  \item Lets install torch.
+\end{enumerate}
+
+\begin{center}
+\href{run:./Text_Files_14/Torch.txt}{\Large Torch}
+\end{center}
+
+\begin{enumerate}[resume]
+  \item Open your chromium browser in VM by typing chromium in terminal.
+  \item Lets log in to ZeroBraneStudio \href{https://studio.zerobrane.com/download?not-this-time}{website}.
+  \item Download the Linux version.	
+  \item Click on the hyperlink below and enter all the commands in the not Notepad one by one.
+\end{enumerate}
+
+\begin{center}
+\href{run:./Text_Files_14/ZeroB.txt}{\Large ZeroBraneStudio}
+\end{center}
+
+\begin{enumerate}[resume]
+  \item You can run the editor by entering zbstudio.
+  \item To test that the Torch is working. Download gputest.luad from \href{https://gist.github.com/jaderberg/6436387}{here}.
+  \item Click on the hyperlink below and enter all the commands in the not Notepad one by one.
+\end{enumerate}
+
+\begin{center}
+\href{run:./Text_Files_14/Torch_test.txt}{\Large Torch Test}
+\end{center}
+
+
+\subsubsection{Caffe}
+
+\begin{enumerate}[resume]
+  \item Lets install Caffe. Run the following command in the hyperlink below
+  \item Disregard the next 2 steps if you did not get any error.
+  \item You could have "TypeError: 'NoneType' object is not callable" error when installing pillow, then try:
+  \item sudo apt-get install pypy-dev
+\end{enumerate}
+
+\begin{center}
+\href{run:./Text_Files_14/Caffe.txt}{\Large Caffe}
+\end{center}
+
+\begin{enumerate}[resume]
+  \item Edit the following command after the vi Makefile.config.
+  \item Uncomment the line: USE\_CUDNN := 1
+  \item Make sure the CUDA\_DIR correctly points to our CUDA installation.
+  \item If you want the Matlab wrapper, uncomment the appropriate MATLAB\_DIR line.
+  \item Now we build Caffe. Set X to the number of CPU threads (or cores) on your machine (in the Notepad jX). Use the command htop to check how many CPU threads you have.
+  \item Click on the hyperlink below and enter all the commands in the not Notepad one by one.
+\end{enumerate}
+
+\begin{center}
+\href{run:./Text_Files_14/Caffe1.txt}{\Large Caffe Continue 1}
+\end{center}
+
+\begin{enumerate}[resume]
+   \item After you did the sudo nano \~/.bashrc. At the end of the script add the following command. Ctrl+x and hit the y key on your keyboard and enter.
+   \item export PYTHONPATH=/home/ajafari/caffe/python
+   \item Now run the all the commands in the Notepad and Caffe should point to directory to python path.
+\end{enumerate}
+
+\begin{center}
+\href{run:./Text_Files_14/Caffe2.txt}{\Large Caffe Continue 2}
+\end{center}
+
+\begin{enumerate}[resume]
+   \item Open python and import Caffe to test everything is working.
+\end{enumerate}
+
+
+\subsubsection{Tensorflow}
+
+\begin{enumerate}[resume]
+  \item Lets install tensoflow gpu.
+\end{enumerate}
+
+\begin{center}
+\href{run:./Text_Files_14/tensorflow.txt}{\Large Tensorflow GPU}
+\end{center}
+
+\begin{enumerate}[resume]
+  \item To activate the tensorflow for python 2.7 enter source \~/tensorflow2/bin/activate.
+  \item To activate the tensorflow for python 3.5 enter source \~/tensorflow3/bin/activate.
+  \item Then you can open up pycharm and choose the interpreter based on the python that you choosed.
+\end{enumerate}
+
+\subsubsection{Theano}
+
+\begin{enumerate}[resume]
+  \item Lets install theano.
+\end{enumerate}
+
+\begin{center}
+\href{run:./Text_Files_14/Theano.txt}{\Large Theano}
+\end{center}
+
+\begin{enumerate}[resume]
+  \item To check theano work on gpu, you need to set the flags.
+  \item Follow the instruction on the website \href{http://theano.readthedocs.io/en/0.8.x/tutorial/using_gpu.html}{website}
+\end{enumerate}
+
+\subsubsection{Keras}
+
+\begin{enumerate}[resume]
+  \item Lets install keras.
+\end{enumerate}
+
+\begin{center}
+\href{run:./Text_Files_14/Keras.txt}{\Large Keras}
+\end{center}
+
+\subsubsection{Pytorch}
+
+\begin{enumerate}[resume]
+  \item Lets install Pytorch.
+\end{enumerate}
+
+\begin{center}
+\href{run:./Text_Files_14/Pytorch.txt}{\Large Pytorch}
+\end{center}
+
+
+
+
+
+%\newpage
+%\addcontentsline{toc}{section}{References}
+%\bibliographystyle{IEEEtran}
+%\bibliography{mybibInstallation}
+\end{document}
