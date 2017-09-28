@@ -96,11 +96,11 @@ sudo apt install unzip
 
 # ------------------------ Pycharm Installation ------------------------
 
-# Download .deb file from google storage bucket
-wget https://storage.googleapis.com/cuda-deb/pycharm-community_2016.3-mm1_all.deb
-# unpack the contents
-sudo dpkg -i pycharm-community_2016.3-mm1_all.deb
-
+## Download .deb file from google storage bucket
+#wget https://storage.googleapis.com/cuda-deb/pycharm-community_2016.3-mm1_all.deb
+## unpack the contents
+#sudo dpkg -i pycharm-community_2016.3-mm1_all.deb
+#
 # ------------------------ Torch Installation ------------------------
 
 ## install git
@@ -192,64 +192,63 @@ sudo dpkg -i pycharm-community_2016.3-mm1_all.deb
 ## Change back to the root directory
 #cd ..
 #
-## ------------- Virtual Environment for Tensorflow - Python 2.7.X -------------
-#
-## Install libraries needed to make a virtual environment
-#sudo apt-get install python-pip python-dev python-virtualenv
-## Create a virtual environment, tensorflow2
-#virtualenv --system-site-packages tensorflow2
-## Activate the virtual environment 
-#source ~/tensorflow2/bin/activate
-## Install pip in virtual environment
-#easy_install -U pip
-## Make sure the tensorflow package is up-to-date
-#pip install --upgrade tensorflow-gpu
-## deactivate the virtual environment
-#deactivate
-#
-## ------------- Virtual Environment for Tensorflow - Python 3.5.X -------------
-#
-## Install libraries needed to make a virtual environment
-#sudo apt-get install python3-pip python3-dev python-virtualenv
-## Create a virtual environment, tensorflow3
-#virtualenv --system-site-packages -p python3 tensorflow3
-## Activate the virtual environment 
-#source ~/tensorflow3/bin/activate
-## Install pip in virtual environment
-#easy_install -U pip
-## Make sure the tensorflow package is up-to-date
-#pip3 install --upgrade tensorflow-gpu
-## deactivate the virtual environment
-#deactivate
-#
-## ----------------- Theano Installation -----------------
-#
-## Install Theano (Python2)
-#sudo pip install Theano 
-## Download tar file from google storage bucket
-#wget https://storage.googleapis.com/cuda-deb/six-1.11.0.tar.gz
-## Untar the file
-#tar -zxf six-1.11.0.tar.gz
-## Change into the new directory
-#cd six-1.11.0
-## run the setup script
-#sudo python setup.py install
-## Change back to the root directory
-#cd ..
-## Install Theano (Python3)
-#sudo pip3 install Theano 
-#
-## ----------------- Keras Installation -----------------
-#
-## Python 2
-#sudo pip install keras
-## Python 3
-#sudo pip3 install keras
-#
-## ----------------- Pytorch Installation -----------------
-#
-## Install PyTorch (Python 2 & 3) from wheel file
-#sudo pip install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl 
-## Install Torch Vision (Python 2)
-#sudo pip install torchvision 
-#
+# ------------- Virtual Environment for Tensorflow - Python 2.7.X -------------
+
+# Install libraries needed to make a virtual environment
+sudo apt-get install python-pip python-dev python-virtualenv
+# Create a virtual environment, tensorflow2
+virtualenv --system-site-packages tensorflow2
+# Activate the virtual environment 
+source ~/tensorflow2/bin/activate
+# Install pip in virtual environment
+easy_install -U pip
+# Make sure the tensorflow package is up-to-date
+pip install --upgrade tensorflow-gpu
+# deactivate the virtual environment
+deactivate
+
+# ------------- Virtual Environment for Tensorflow - Python 3.5.X -------------
+
+# Install libraries needed to make a virtual environment
+sudo apt-get install python3-pip python3-dev python-virtualenv
+# Create a virtual environment, tensorflow3
+virtualenv --system-site-packages -p python3 tensorflow3
+# Activate the virtual environment 
+source ~/tensorflow3/bin/activate
+# Install pip in virtual environment
+easy_install -U pip
+# Make sure the tensorflow package is up-to-date
+pip3 install --upgrade tensorflow-gpu
+# deactivate the virtual environment
+deactivate
+
+# ----------------- Theano Installation -----------------
+
+# Install Theano (Python2)
+sudo pip install Theano 
+# Download tar file from google storage bucket
+wget https://storage.googleapis.com/cuda-deb/six-1.11.0.tar.gz
+# Untar the file
+tar -zxf six-1.11.0.tar.gz
+# Change into the new directory
+cd six-1.11.0
+# run the setup script
+sudo python setup.py install
+# Change back to the root directory
+cd ..
+# Install Theano (Python3)
+sudo pip3 install Theano 
+
+# ----------------- Keras Installation -----------------
+
+# Python 2
+sudo pip install keras
+# Python 3
+sudo pip3 install keras
+
+# ----------------- Pytorch Installation -----------------
+
+# Install PyTorch (Python 2 & 3) from wheel file
+sudo pip install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl 
+# Install Torch Vision (Python 2)
+sudo pip install torchvision 
