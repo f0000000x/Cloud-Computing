@@ -136,7 +136,7 @@ import tensorflow
 import keras
 ```
 ```
-import theanopycharm-community
+import theano
 ```
 if you did not get any error then exit out from python env by exit().  Enter the following command to get out of the virtualenv.
 ```

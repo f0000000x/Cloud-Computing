@@ -104,7 +104,9 @@ then in the python env write
 ```
 import torch
 ```
-
+```
+import torchvision
+```
 if you did not get any error then exit out from python env by exit().
 
 * Pycharm and ZeroBraneStudio
