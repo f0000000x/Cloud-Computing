@@ -55,8 +55,8 @@ sudo apt-get install -y python-h5py
 sudo apt-get install -y python-leveldb
 sudo apt-get install -y python-protobuf
 sudo apt-get install -y python-gflags
-sudo apt-get install -y python-seaborn
 sudo apt-get install -y python-networkx
+sudo apt-get install -y python-seaborn
 sudo pip install --upgrade pip
 sudo pip install --upgrade tensorflow-gpu
 sudo pip install Theano
@@ -88,8 +88,6 @@ sudo apt-get install -y python3-skimage
 sudo apt-get install -y python3-h5py
 sudo apt-get install -y python3-leveldb
 sudo apt-get install -y python3-yaml
-sudo apt-get install -y python3-networkx
-sudo apt-get install -y python3-seaborn
 sudo pip3 install --upgrade pip
 sudo pip3 install --upgrade tensorflow-gpu
 sudo pip3 install pandas --upgrade
@@ -99,6 +97,7 @@ sudo pip3 install Theano
 sudo pip3 install keras
 sudo pip3 install protobuf
 sudo pip3 install sklearn
+sudo pip3 install seaborn
 sudo pip3 install cython
 sudo pip3 install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl 
 sudo pip3 install torchvision
