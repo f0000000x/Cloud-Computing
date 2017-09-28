@@ -34,7 +34,79 @@ source /etc/environment
 # Check the version of Cuda to see it is installed
 nvcc --version
 # Check that the graphics card driver is installed and working with the GPU
-nvidia-smi
+nvidia-smi# Install libraries needed to make a virtual environment
+
+sudo apt upgrade 
+sudo apt-get install -y python-pip python-dev python-virtualenv
+# Create a virtual environment, tensorflow2
+virtualenv --system-site-packages python2
+# Activate the virtual environment 
+source ~/python2/bin/activate
+# Install pip in virtual environment
+easy_install -U pip
+# Make sure the tensorflow package is up-to-date
+sudo apt-get install -y python-pip python-dev
+sudo apt-get install -y python-tk
+sudo apt-get install -y python-matplotlib
+sudo apt-get install -y python-pandas
+sudo apt-get install -y python-sklearn
+sudo apt-get install -y python-skimage
+sudo apt-get install -y python-h5py
+sudo apt-get install -y python-leveldb
+sudo apt-get install -y python-protobuf
+sudo apt-get install -y python-gflags
+sudo apt-get install -y python-seaborn
+sudo apt-get install -y python-networkx
+sudo pip install --upgrade pip
+sudo pip install --upgrade tensorflow-gpu
+sudo pip install Theano
+sudo pip install keras
+sudo pip install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl 
+sudo pip install torchvision 
+sudo pip install numpy --upgrade
+ 
+# deactivate the virtual environment
+deactivate
+
+# ------------- Virtual Environment for Tensorflow - Python 3.5.X -------------
+# Install libraries needed to make a virtual environment
+sudo apt-get install -y python3-pip python3-dev python-virtualenv
+# Create a virtual environment, tensorflow3
+virtualenv --system-site-packages -p python3 python3
+# Activate the virtual environment 
+source ~/python3/bin/activate
+# Install pip in virtual environment
+easy_install -U pip
+# Make sure the tensorflow package is up-to-date
+sudo apt-get install -y python3-pip python3-dev
+sudo apt-get install -y python3-tk
+sudo apt-get install -y python3-pip
+sudo apt-get install -y python3-matplotlib
+sudo apt-get install -y python3-numpy
+sudo apt-get install -y python3-pandas
+sudo apt-get install -y python3-skimage
+sudo apt-get install -y python3-h5py
+sudo apt-get install -y python3-leveldb
+sudo apt-get install -y python3-yaml
+sudo apt-get install -y python3-networkx
+sudo apt-get install -y python3-seaborn
+sudo pip3 install --upgrade pip
+sudo pip3 install --upgrade tensorflow-gpu
+sudo pip3 install pandas --upgrade
+sudo pip3 install --upgrade numexpr
+sudo pip3 install --upgrade numpy
+sudo pip3 install Theano 
+sudo pip3 install keras
+sudo pip3 install protobuf
+sudo pip3 install sklearn
+sudo pip3 install cython
+sudo pip3 install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl 
+sudo pip3 install torchvision
+# deactivate the virtual environment
+deactivate
+
+sudo apt-get install -y p7zip-full
+sudo apt install unzip
 
 # ------------------------ CuDNN Installation ------------------------
 
@@ -57,80 +129,7 @@ cd ..
 # --- Python2 pip and packages
 # ------------- Virtual Environment for Tensorflow - Python 2.7.X -------------
 
-# Install libraries needed to make a virtual environment
-sudo apt-get install python-pip python-dev python-virtualenv
-sudo pip install --upgrade pip
-# Create a virtual environment, tensorflow2
-virtualenv --system-site-packages python2
-# Activate the virtual environment 
-source ~/python2/bin/activate
-# Install pip in virtual environment
-easy_install -U pip
-# Make sure the tensorflow package is up-to-date
-sudo -H pip install --upgrade tensorflow-gpu
-sudo -H pip install keras
-sudo -H pip install Theano 
-sudo -H pip install matplotlib
-sudo -H pip install pandas
-sudo -H pip install sklearn
-sudo -H pip install scikit-image
-sudo -H pip install h5py
-sudo -H pip install leveldb
-sudo -H pip install seaborn
 
-
-# Install Theano (Python2)
-
-# Download tar file from google storage bucket
-#wget https://storage.googleapis.com/cuda-deb/six-1.11.0.tar.gz
-# Untar the file
-#tar -zxf six-1.11.0.tar.gz
-# Change into the new directory
-#cd six-1.11.0
-# run the setup script
-#sudo python setup.py install
-# Change back to the root directory
-#cd ..
-# Install Theano (Python3)
-
-sudo pip install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl 
-sudo pip install torchvision 
-sudo pip install numpy --upgrade
-# deactivate the virtual environment
-deactivate
-
-# --- Python3 pip and packages
-# ------------- Virtual Environment for Tensorflow - Python 3.5.X -------------
-
-# Install libraries needed to make a virtual environment
-sudo apt-get install python3-pip python3-dev python-virtualenv
-sudo pip3 install --upgrade pip
-# Create a virtual environment, tensorflow3
-virtualenv --system-site-packages -p python3 python3
-# Activate the virtual environment 
-source ~/python3/bin/activate
-# Install pip in virtual environment
-easy_install -U pip
-# Make sure the tensorflow package is up-to-date
-sudo -H pip3 install --upgrade tensorflow-gpu
-sudo -H pip3 install keras
-sudo -H pip3 install Theano 
-sudo -H pip3 install matplotlib
-sudo -H pip3 install pandas
-sudo -H pip3 install sklearn
-sudo -H pip3 install scikit-image
-sudo -H pip3 install h5py
-sudo -H pip3 install leveldb
-sudo -H pip3 install seaborn
-
-sudo pip3 install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl 
-sudo pip3 install torchvision
-# deactivate the virtual environment
-deactivate
-
-# install packages to zip and unzip files 
-#sudo apt-get install -y p7zip-full
-#sudo apt install unzip
 #
 ## ------------------------ Pycharm Installation ------------------------
 #
