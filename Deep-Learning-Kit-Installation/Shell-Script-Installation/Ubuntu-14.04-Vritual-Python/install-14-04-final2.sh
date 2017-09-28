@@ -74,12 +74,10 @@ sudo apt-get install -y python-sklearn
 sudo apt-get install -y python-skimage
 sudo apt-get install -y python-h5py
 sudo apt-get install -y python-leveldb
-sudo apt-get install -y python-protobuf
-sudo apt-get install -y python-gflags
 sudo pip install --upgrade pip
 sudo pip install networkx
 sudo pip install seaborn
-sudo pip install cython
+sudo pip install --upgrade protobuf
 sudo pip install --upgrade tensorflow-gpu
 # Install Theano (Python2)
 sudo pip install Theano 
@@ -114,24 +112,18 @@ source ~/python3/bin/activate
 easy_install -U pip
 # Make sure the tensorflow package is up-to-date
 sudo apt-get install -y python3-pip python3-dev
-sudo apt-get install -y python3-tk
-sudo apt-get install -y python3-pip
-sudo apt-get install -y python3-matplotlib
-sudo apt-get install -y python3-numpy
-sudo apt-get install -y python3-pandas
-sudo apt-get install -y python3-skimage
-sudo apt-get install -y python3-h5py
-sudo apt-get install -y python3-leveldb
-sudo apt-get install -y python3-yaml
-sudo apt-get install -y python3-networkx
 sudo pip3 install --upgrade pip
+sudo pip3 install --upgrade tensorflow-gpu
+sudo pip3 install keras
+sudo pip3 install Theano 
+sudo pip3 install matplotlib
+sudo pip3 install numpy
+sudo pip3 install pandas
+sudo pip3 install h5py
 sudo pip3 install protobuf
 sudo pip3 install seaborn
 sudo pip3 install sklearn
-sudo pip3 install cython
-sudo pip3 install --upgrade tensorflow-gpu
-sudo pip3 install Theano 
-sudo pip3 install keras
+
 sudo pip3 install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl 
 sudo pip3 install torchvision
 # deactivate the virtual environment

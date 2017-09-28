@@ -41,7 +41,7 @@ cd ..
 # ------------- Virtual Environment for Tensorflow - Python 2.7.X -------------
 
 # Install libraries needed to make a virtual environment
-sudo apt-get install python-pip python-dev python-virtualenv
+sudo apt-get install -y python-pip python-dev python-virtualenv
 # Create a virtual environment, tensorflow2
 virtualenv --system-site-packages python2
 # Activate the virtual environment 
