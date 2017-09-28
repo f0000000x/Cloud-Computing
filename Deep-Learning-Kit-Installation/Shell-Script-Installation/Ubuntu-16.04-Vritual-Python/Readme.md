@@ -96,7 +96,7 @@ then in the python env write
 ```
 import torch
 ```
-```
+
 if you did not get any error then exit out from python env by exit().
 
 * Tensorflow, Keras, Theano (python 3.5)
