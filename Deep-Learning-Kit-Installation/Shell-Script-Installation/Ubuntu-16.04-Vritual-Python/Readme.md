@@ -51,11 +51,14 @@ if torch is is installed correctly then you should be see a long list. Then type
 ```
 exit
 ```
-and then enter yes to get out of the torch env.
+and then enter y to get out of the torch env.
 
 * Caffe
 
 Enter the following command on your terminal
+```
+sudo ln /dev/null /dev/raw1394
+```
 ```
 sudo rm -rf /dev/raw1394
 ```
@@ -87,7 +90,10 @@ import keras
 ```
 import theano
 ```
-if you did not get any error then exit out from python env by exit().
+if you did not get any error then exit out from python env by exit(). Enter the following command to get out of the virtualenv.
+```
+deactivate
+```
 
 
 * Pytorch (python 2.7)
@@ -100,8 +106,12 @@ then in the python env write
 ```
 import torch
 ```
+```
+import torchvision
+```
 
-if you did not get any error then exit out from python env by exit().
+if you did not get any error then exit out from python env by exit(). 
+
 
 * Tensorflow, Keras, Theano (python 3.5)
 
@@ -128,7 +138,10 @@ import keras
 ```
 import theano
 ```
-if you did not get any error then exit out from python env by exit().
+if you did not get any error then exit out from python env by exit().  Enter the following command to get out of the virtualenv.
+```
+deactivate
+```
 
 
 * Pytorch (python 3.5)
@@ -140,6 +153,9 @@ python3
 then in the python env write
 ```
 import torch
+```
+```
+import torchvision
 ```
 
 if you did not get any error then exit out from python env by exit().
