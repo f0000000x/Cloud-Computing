@@ -136,7 +136,7 @@ import tensorflow
 import keras
 ```
 ```
-import theano
+import theanopycharm-community
 ```
 if you did not get any error then exit out from python env by exit().  Enter the following command to get out of the virtualenv.
 ```
@@ -158,6 +158,20 @@ import torch
 import torchvision
 ```
 
-if you did not get any error then exit out from python env by exit().
+if you did not get any error then exit out pycharm-communityfrom python env by exit().
+
+* Pycharm and ZeroBraneStudio
+
+Note: Mac users need to acivate [Xquartz](https://www.xquartz.org/) in their machine and then open your terminal. Remmber your ssh shuld have flag -X. 
+Note: Windows users use Mobaexterma and you are fine.
+
+To activate pycharm enter the following commands 
+```
+pycharm-community
+```
+To activate ZeroBraneStudio
+```
+zbstudio
+```
 
 
