@@ -1,5 +1,22 @@
-1- Create an intance with 1 GPU in Ubuntu 14.04.
-2- Transfer the install-14-04-final1.sh to your instance.
-3- chmode +x install-14-04-final1.sh
-4- sudo ./install-14-04-final1.sh <userid>
-5- Whenever asks a qestion enter yes.
+# ---- Ubuntu 14.04 virtual env steps to run the shell script ----
+
+
+sudo apt-get install git -y
+
+
+git clone https://github.com/amir-jafari/Cloud-Computing.git
+
+
+cd Cloud-Computing/Deep-Learning-Kit-Installation/Shell-Script-Installation/Ubuntu-14.04/
+
+
+mv install-14-04-final1.sh ~
+
+
+cd ~
+
+
+chmod +x install-14-04-final1.sh
+
+
+sudo ./install-14-04-final1.sh <netid or username of ssh key>
