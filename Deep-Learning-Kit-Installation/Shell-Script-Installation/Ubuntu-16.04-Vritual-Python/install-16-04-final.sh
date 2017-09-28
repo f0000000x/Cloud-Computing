@@ -74,7 +74,7 @@ deactivate
 
 # ------------- Virtual Environment for Tensorflow - Python 3.5.X -------------
 # Install libraries needed to make a virtual environment
-sudo apt-get install python3-pip python3-dev python-virtualenv
+sudo apt-get install -y python3-pip python3-dev python-virtualenv
 # Create a virtual environment, tensorflow3
 virtualenv --system-site-packages -p python3 python3
 # Activate the virtual environment 
