@@ -47,7 +47,11 @@ in to your terminal and you should be able to see the torch environment. Now ent
 ```
 require 'dp'
 ```
-if torch is isnatlled correctly then you should be see a long list.
+if torch is is installed correctly then you should be see a long list. Then type
+```
+exit
+```
+and then enter yes to get out of the torch env.
 
 * Caffe
 
