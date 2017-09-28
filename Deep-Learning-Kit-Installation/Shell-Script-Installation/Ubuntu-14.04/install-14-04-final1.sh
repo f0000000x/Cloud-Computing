@@ -56,23 +56,23 @@ cd ..
 
 # -------------------- Python Required Package Installations --------------------
 
-# --- Python3 pip and packages
-sudo apt-get install -y python3-pip python3-dev
-sudo apt-get install -y python3-tk
-sudo apt-get install -y python3-pip
-sudo apt-get install -y python3-matplotlib
-sudo apt-get install -y python3-numpy
-sudo apt-get install -y python3-pandas
-sudo apt-get install -y python3-skimage
-sudo apt-get install -y python3-h5py
-sudo apt-get install -y python3-leveldb
-sudo apt-get install -y python3-yaml
-sudo apt-get install -y python3-networkx
-sudo pip3 install --upgrade pip
-sudo pip3 install protobuf
-sudo pip3 install seaborn
-sudo pip3 install sklearn
-sudo pip3 install cython
+## --- Python3 pip and packages
+#sudo apt-get install -y python3-pip python3-dev
+#sudo apt-get install -y python3-tk
+#sudo apt-get install -y python3-pip
+#sudo apt-get install -y python3-matplotlib
+#sudo apt-get install -y python3-numpy
+#sudo apt-get install -y python3-pandas
+#sudo apt-get install -y python3-skimage
+#sudo apt-get install -y python3-h5py
+#sudo apt-get install -y python3-leveldb
+#sudo apt-get install -y python3-yaml
+#sudo apt-get install -y python3-networkx
+#sudo pip3 install --upgrade pip
+#sudo pip3 install protobuf
+#sudo pip3 install seaborn
+#sudo pip3 install sklearn
+#sudo pip3 install cython
 
 # --- Python2 pip and packages
 sudo apt-get install -y python-pip python-dev
@@ -195,32 +195,32 @@ sudo apt install unzip
 # ------------- Virtual Environment for Tensorflow - Python 2.7.X -------------
 
 # Install libraries needed to make a virtual environment
-sudo apt-get install python-pip python-dev python-virtualenv
+#sudo apt-get install python-pip python-dev python-virtualenv
 # Create a virtual environment, tensorflow2
-virtualenv --system-site-packages tensorflow2
+#virtualenv --system-site-packages tensorflow2
 # Activate the virtual environment 
-source ~/tensorflow2/bin/activate
+#source ~/tensorflow2/bin/activate
 # Install pip in virtual environment
-easy_install -U pip
+#easy_install -U pip
 # Make sure the tensorflow package is up-to-date
-pip install --upgrade tensorflow-gpu
+sudo pip install --upgrade tensorflow-gpu
 # deactivate the virtual environment
-deactivate
+#deactivate
 
-# ------------- Virtual Environment for Tensorflow - Python 3.5.X -------------
-
-# Install libraries needed to make a virtual environment
-sudo apt-get install python3-pip python3-dev python-virtualenv
-# Create a virtual environment, tensorflow3
-virtualenv --system-site-packages -p python3 tensorflow3
-# Activate the virtual environment 
-source ~/tensorflow3/bin/activate
-# Install pip in virtual environment
-easy_install -U pip
-# Make sure the tensorflow package is up-to-date
-pip3 install --upgrade tensorflow-gpu
-# deactivate the virtual environment
-deactivate
+## ------------- Virtual Environment for Tensorflow - Python 3.5.X -------------
+#
+## Install libraries needed to make a virtual environment
+#sudo apt-get install python3-pip python3-dev python-virtualenv
+## Create a virtual environment, tensorflow3
+#virtualenv --system-site-packages -p python3 tensorflow3
+## Activate the virtual environment 
+#source ~/tensorflow3/bin/activate
+## Install pip in virtual environment
+#easy_install -U pip
+## Make sure the tensorflow package is up-to-date
+#pip3 install --upgrade tensorflow-gpu
+## deactivate the virtual environment
+#deactivate
 
 # ----------------- Theano Installation -----------------
 
@@ -237,18 +237,17 @@ sudo python setup.py install
 # Change back to the root directory
 cd ..
 # Install Theano (Python3)
-sudo pip3 install Theano 
+#sudo pip3 install Theano 
 
 # ----------------- Keras Installation -----------------
 
 # Python 2
 sudo pip install keras
 # Python 3
-sudo pip3 install keras
+#sudo pip3 install keras
 
 # ----------------- Pytorch Installation -----------------
 
 # Install PyTorch (Python 2 & 3) from wheel file
 sudo pip install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl 
-# Install Torch Vision (Python 2)
 sudo pip install torchvision 
