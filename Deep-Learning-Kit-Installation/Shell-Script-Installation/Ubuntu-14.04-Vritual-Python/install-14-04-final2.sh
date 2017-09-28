@@ -59,6 +59,7 @@ cd ..
 
 # Install libraries needed to make a virtual environment
 sudo apt-get install python-pip python-dev python-virtualenv
+sudo pip install --upgrade pip
 # Create a virtual environment, tensorflow2
 virtualenv --system-site-packages python2
 # Activate the virtual environment 
@@ -66,21 +67,20 @@ source ~/python2/bin/activate
 # Install pip in virtual environment
 easy_install -U pip
 # Make sure the tensorflow package is up-to-date
-sudo apt-get install -y python-pip python-dev
-sudo apt-get install -y python-tk
-sudo apt-get install -y python-matplotlib
-sudo apt-get install -y python-pandas
-sudo apt-get install -y python-sklearn
-sudo apt-get install -y python-skimage
-sudo apt-get install -y python-h5py
-sudo apt-get install -y python-leveldb
-sudo pip install --upgrade pip
-sudo pip install networkx
-sudo pip install seaborn
-sudo pip install --upgrade protobuf
 sudo pip install --upgrade tensorflow-gpu
-# Install Theano (Python2)
+sudo pip install keras
 sudo pip install Theano 
+sudo pip install matplotlib
+sudo pip install pandas
+sudo pip install sklearn
+sudo pip install skimage
+sudo pip install h5py
+sudo pip install leveldb
+sudo pip install seaborn
+
+
+# Install Theano (Python2)
+
 # Download tar file from google storage bucket
 #wget https://storage.googleapis.com/cuda-deb/six-1.11.0.tar.gz
 # Untar the file
@@ -92,7 +92,7 @@ sudo pip install Theano
 # Change back to the root directory
 #cd ..
 # Install Theano (Python3)
-sudo pip install keras
+
 sudo pip install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl 
 sudo pip install torchvision 
 sudo pip install numpy --upgrade
@@ -104,6 +104,7 @@ deactivate
 
 # Install libraries needed to make a virtual environment
 sudo apt-get install python3-pip python3-dev python-virtualenv
+sudo pip3 install --upgrade pip
 # Create a virtual environment, tensorflow3
 virtualenv --system-site-packages -p python3 python3
 # Activate the virtual environment 
@@ -111,8 +112,6 @@ source ~/python3/bin/activate
 # Install pip in virtual environment
 easy_install -U pip
 # Make sure the tensorflow package is up-to-date
-sudo apt-get install -y python3-pip python3-dev
-sudo pip3 install --upgrade pip
 sudo pip3 install --upgrade tensorflow-gpu
 sudo pip3 install keras
 sudo pip3 install Theano 
@@ -120,7 +119,6 @@ sudo pip3 install matplotlib
 sudo pip3 install numpy
 sudo pip3 install pandas
 sudo pip3 install h5py
-sudo pip3 install protobuf
 sudo pip3 install seaborn
 sudo pip3 install sklearn
 
@@ -130,104 +128,104 @@ sudo pip3 install torchvision
 deactivate
 
 # install packages to zip and unzip files 
-sudo apt-get install -y p7zip-full
-sudo apt install unzip
-
-# ------------------------ Pycharm Installation ------------------------
-
-# Download .deb file from google storage bucket
-wget https://storage.googleapis.com/cuda-deb/pycharm-community_2016.3-mm1_all.deb
-# unpack the contents
-sudo dpkg -i pycharm-community_2016.3-mm1_all.deb
-
-# ------------------------ Torch Installation ------------------------
-
-# install git
-sudo apt install git -y
-# clone the torch github repo 
-git clone https://github.com/torch/distro.git ~/torch --recursive
-# Change into the torch repo
-cd ~/torch 
-# run the dependency install
-bash install-deps
-# run the install script 
-./install.sh
-# Change back into the root directory
-cd ..
-# Execute the .bashrc script
-source ~/.bashrc
-# Install the Lua package manager
-sudo apt-get install -y luarocks
-# Install Lua packages in the luarocks directory
-sudo ~/torch/install/bin/luarocks install image 
-sudo ~/torch/install/bin/luarocks install nngraph
-sudo ~/torch/install/bin/luarocks install optim
-sudo ~/torch/install/bin/luarocks install nn
-sudo ~/torch/install/bin/luarocks install cutorch
-sudo ~/torch/install/bin/luarocks install cunn
-sudo ~/torch/install/bin/luarocks install cunnx
-sudo ~/torch/install/bin/luarocks install dp
-# Install these packages and their dependencies, but not other recommended ones
-sudo apt-get install --no-install-recommends libhdf5-serial-dev liblmdb-dev
-# Install more Lua packages/files in the luarocks directory
-sudo ~/torch/install/bin/luarocks install tds
-sudo ~/torch/install/bin/luarocks install "https://raw.github.com/deepmind/torch-hdf5/master/hdf5-0-0.rockspec"
-sudo ~/torch/install/bin/luarocks install "https://raw.github.com/Neopallium/lua-pb/master/lua-pb-scm-0.rockspec"
-sudo ~/torch/install/bin/luarocks install lightningmdb 0.9.18.1-1 LMDB_INCDIR=/usr/include LMDB_LIBDIR=/usr/lib/x86_64-linux-gnu
-sudo ~/torch/install/bin/luarocks install "httpsraw.githubusercontent.comngimelnccl.torchmasternccl-scm-1.rockspec"
-# Clone the git repo of torch demos
-git clone https://github.com/torch/demos
-# Install library
-sudo apt-get install gnuplot-x11
-# Update libraries 
-sudo apt update
-
-# ------------------------ ZeroBrane Studio Installation ------------------------
-
-# Download shell script form google storage bucket
-wget https://storage.googleapis.com/cuda-deb/ZeroBraneStudioEduPack-1.60-linux.sh
-# Make the script executable
-chmod +x ZeroBraneStudioEduPack-1.60-linux.sh
-# Run the shell script
-./ZeroBraneStudioEduPack-1.60-linux.sh
-
-# ------------------------ Caffe Installation ------------------------
-
-# Install dependencies
-sudo apt-get install -y libprotobuf-dev libleveldb-dev libsnappy-dev \
-    					libopencv-dev libboost-all-dev libhdf5-serial-dev \
-    					protobuf-compiler gfortran libjpeg62 libfreeimage-dev \
-    					libatlas-base-dev git python-dev python-pip \
-    					libgoogle-glog-dev libbz2-dev libxml2-dev libxslt-dev \
-    					libffi-dev libssl-dev libgflags-dev liblmdb-dev \
-    					python-yaml python-numpy
-# Install pillow
-sudo easy_install pillow
-# Change to root directory
-cd ~
-# Clone the BVLC Caffe repo
-git clone https://github.com/BVLC/caffe.git
-# Change into the caffe repo directory
-cd caffe
-# Install all python requirements in the requirements.txt file
-cat python/requirements.txt | xargs -L 1 sudo pip install
-# Make a copy of the Makefile to use
-cp Makefile.config.example Makefile.config
-# Uncomment the line to use CuDNN
-sed -i '/^# USE_CUDNN := 1/s/^# //' Makefile.config
-# Make Caffe from the rules in the makefile using 8 cores
-make pycaffe -j8
-make all -j8
-make test -j8
-# Export the path to .bashrc and source it 
-echo "export PYTHONPATH=/home/$1/caffe/python" >> ~/.bashrc
-source ~/.bashrc
-# Create a link between the 2 files
-sudo ln /dev/null /dev/raw1394
-# Install more python dependencies
-sudo apt-get install -y python-skimage
-sudo apt-get install -y python-pydot
-sudo apt-get install -y python-protobuf 
-# Change back to the root directory
-cd ..
-
+#sudo apt-get install -y p7zip-full
+#sudo apt install unzip
+#
+## ------------------------ Pycharm Installation ------------------------
+#
+## Download .deb file from google storage bucket
+#wget https://storage.googleapis.com/cuda-deb/pycharm-community_2016.3-mm1_all.deb
+## unpack the contents
+#sudo dpkg -i pycharm-community_2016.3-mm1_all.deb
+#
+## ------------------------ Torch Installation ------------------------
+#
+## install git
+#sudo apt install git -y
+## clone the torch github repo 
+#git clone https://github.com/torch/distro.git ~/torch --recursive
+## Change into the torch repo
+#cd ~/torch 
+## run the dependency install
+#bash install-deps
+## run the install script 
+#./install.sh
+## Change back into the root directory
+#cd ..
+## Execute the .bashrc script
+#source ~/.bashrc
+## Install the Lua package manager
+#sudo apt-get install -y luarocks
+## Install Lua packages in the luarocks directory
+#sudo ~/torch/install/bin/luarocks install image 
+#sudo ~/torch/install/bin/luarocks install nngraph
+#sudo ~/torch/install/bin/luarocks install optim
+#sudo ~/torch/install/bin/luarocks install nn
+#sudo ~/torch/install/bin/luarocks install cutorch
+#sudo ~/torch/install/bin/luarocks install cunn
+#sudo ~/torch/install/bin/luarocks install cunnx
+#sudo ~/torch/install/bin/luarocks install dp
+## Install these packages and their dependencies, but not other recommended ones
+#sudo apt-get install --no-install-recommends libhdf5-serial-dev liblmdb-dev
+## Install more Lua packages/files in the luarocks directory
+#sudo ~/torch/install/bin/luarocks install tds
+#sudo ~/torch/install/bin/luarocks install "https://raw.github.com/deepmind/torch-hdf5/master/hdf5-0-0.rockspec"
+#sudo ~/torch/install/bin/luarocks install "https://raw.github.com/Neopallium/lua-pb/master/lua-pb-scm-0.rockspec"
+#sudo ~/torch/install/bin/luarocks install lightningmdb 0.9.18.1-1 LMDB_INCDIR=/usr/include LMDB_LIBDIR=/usr/lib/x86_64-linux-gnu
+#sudo ~/torch/install/bin/luarocks install "httpsraw.githubusercontent.comngimelnccl.torchmasternccl-scm-1.rockspec"
+## Clone the git repo of torch demos
+#git clone https://github.com/torch/demos
+## Install library
+#sudo apt-get install gnuplot-x11
+## Update libraries 
+#sudo apt update
+#
+## ------------------------ ZeroBrane Studio Installation ------------------------
+#
+## Download shell script form google storage bucket
+#wget https://storage.googleapis.com/cuda-deb/ZeroBraneStudioEduPack-1.60-linux.sh
+## Make the script executable
+#chmod +x ZeroBraneStudioEduPack-1.60-linux.sh
+## Run the shell script
+#./ZeroBraneStudioEduPack-1.60-linux.sh
+#
+## ------------------------ Caffe Installation ------------------------
+#
+## Install dependencies
+#sudo apt-get install -y libprotobuf-dev libleveldb-dev libsnappy-dev \
+#    					libopencv-dev libboost-all-dev libhdf5-serial-dev \
+#    					protobuf-compiler gfortran libjpeg62 libfreeimage-dev \
+#    					libatlas-base-dev git python-dev python-pip \
+#    					libgoogle-glog-dev libbz2-dev libxml2-dev libxslt-dev \
+#    					libffi-dev libssl-dev libgflags-dev liblmdb-dev \
+#    					python-yaml python-numpy
+## Install pillow
+#sudo easy_install pillow
+## Change to root directory
+#cd ~
+## Clone the BVLC Caffe repo
+#git clone https://github.com/BVLC/caffe.git
+## Change into the caffe repo directory
+#cd caffe
+## Install all python requirements in the requirements.txt file
+#cat python/requirements.txt | xargs -L 1 sudo pip install
+## Make a copy of the Makefile to use
+#cp Makefile.config.example Makefile.config
+## Uncomment the line to use CuDNN
+#sed -i '/^# USE_CUDNN := 1/s/^# //' Makefile.config
+## Make Caffe from the rules in the makefile using 8 cores
+#make pycaffe -j8
+#make all -j8
+#make test -j8
+## Export the path to .bashrc and source it 
+#echo "export PYTHONPATH=/home/$1/caffe/python" >> ~/.bashrc
+#source ~/.bashrc
+## Create a link between the 2 files
+#sudo ln /dev/null /dev/raw1394
+## Install more python dependencies
+#sudo apt-get install -y python-skimage
+#sudo apt-get install -y python-pydot
+#sudo apt-get install -y python-protobuf 
+## Change back to the root directory
+#cd ..
+#

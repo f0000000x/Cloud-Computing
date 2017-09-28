@@ -206,9 +206,9 @@ echo "export PYTHONPATH=/home/$1/caffe/python" >> ~/.bashrc
 
 source ~/.bashrc
 sudo ln /dev/null /dev/raw1394
-sudo apt-get install python-skimage
-sudo apt-get install python-pydot
-sudo apt-get install python-protobuf 
+sudo apt-get -y install python-skimage
+sudo apt-get -y install python-pydot
+sudo apt-get -y install python-protobuf 
 sudo rm -rf /dev/raw1394
 
 cd ..
