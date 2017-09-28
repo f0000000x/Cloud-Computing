@@ -52,11 +52,14 @@ if torch is is installed correctly then you should be see a long list. Then type
 ```
 exit
 ```
-and then enter yes to get out of the torch env.
+and then enter y to get out of the torch env.
 
 * Caffe
 
 Enter the following command on your terminal
+```
+sudo ln /dev/null /dev/raw1394
+```
 ```
 sudo rm -rf /dev/raw1394
 ```
@@ -72,6 +75,9 @@ exit out from python env by exit()
 * Tensorflow, Keras, Theano (python 2.7)
 
 Enter the following command on your terminal
+```
+sudo pip install --upgrade tensorflow-gpu
+```
 ```
 python
 ```
