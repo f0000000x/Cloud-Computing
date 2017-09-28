@@ -67,16 +67,16 @@ source ~/python2/bin/activate
 # Install pip in virtual environment
 easy_install -U pip
 # Make sure the tensorflow package is up-to-date
-sudo pip install --upgrade tensorflow-gpu
-sudo pip install keras
-sudo pip install Theano 
-sudo pip install matplotlib
-sudo pip install pandas
-sudo pip install sklearn
-sudo pip install skimage
-sudo pip install h5py
-sudo pip install leveldb
-sudo pip install seaborn
+sudo -H pip install --upgrade tensorflow-gpu
+sudo -H pip install keras
+sudo -H pip install Theano 
+sudo -H pip install matplotlib
+sudo -H pip install pandas
+sudo -H pip install sklearn
+sudo -H pip install scikit-image
+sudo -H pip install h5py
+sudo -H pip install leveldb
+sudo -H pip install seaborn
 
 
 # Install Theano (Python2)
@@ -112,15 +112,16 @@ source ~/python3/bin/activate
 # Install pip in virtual environment
 easy_install -U pip
 # Make sure the tensorflow package is up-to-date
-sudo pip3 install --upgrade tensorflow-gpu
-sudo pip3 install keras
-sudo pip3 install Theano 
-sudo pip3 install matplotlib
-sudo pip3 install numpy
-sudo pip3 install pandas
-sudo pip3 install h5py
-sudo pip3 install seaborn
-sudo pip3 install sklearn
+sudo -H pip3 install --upgrade tensorflow-gpu
+sudo -H pip3 install keras
+sudo -H pip3 install Theano 
+sudo -H pip3 install matplotlib
+sudo -H pip3 install pandas
+sudo -H pip3 install sklearn
+sudo -H pip3 install scikit-image
+sudo -H pip3 install h5py
+sudo -H pip3 install leveldb
+sudo -H pip3 install seaborn
 
 sudo pip3 install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl 
 sudo pip3 install torchvision
