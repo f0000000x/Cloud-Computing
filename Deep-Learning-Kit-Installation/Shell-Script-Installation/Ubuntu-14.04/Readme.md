@@ -16,8 +16,6 @@ cd Cloud-Computing/Deep-Learning-Kit-Installation/Shell-Script-Installation/Ubun
 ```
 ```
 mv install-14-04-final1.sh ~
-
-
 ```
 ```
 cd ~
