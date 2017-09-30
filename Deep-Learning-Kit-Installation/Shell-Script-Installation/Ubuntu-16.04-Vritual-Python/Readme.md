@@ -2,7 +2,7 @@
 
 ## Getting Started 
 
-To install all the Frameworks (torch, caffe, tensorflow, theano, pytorch), launch your VM  and run the following coomands in order in to youe VM terminal.
+To install all the Frameworks (torch, caffe, tensorflow, theano, pytorch), launch your VM  and run the following commands in order in to your VM terminal.
 
 ```
 sudo apt-get install git -y

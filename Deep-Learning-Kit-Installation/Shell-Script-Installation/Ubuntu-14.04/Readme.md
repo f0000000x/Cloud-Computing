@@ -1,8 +1,8 @@
-# Ubuntu 14.04 virtual env steps to run the shell script
+# Ubuntu 14.04 steps to run the shell script
 
 ## Getting Started 
 
-To install all the Frameworks (torch, caffe, tensorflow, theano, pytorch), launch your VM  and run the following coomands in order in to youe VM terminal.
+To install all the Frameworks (torch, caffe, tensorflow, theano, pytorch), launch your VM  and run the following commands in order in to your VM terminal.
 
 ```
 sudo apt-get install git -y
