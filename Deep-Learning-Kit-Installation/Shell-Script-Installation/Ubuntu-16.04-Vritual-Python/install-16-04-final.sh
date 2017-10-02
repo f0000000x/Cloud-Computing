@@ -128,6 +128,7 @@ cd ..
 source ~/.bashrc
 
 sudo apt-get install -y luarocks
+sudo ~/torch/install/bin/luarocks install torch 
 sudo ~/torch/install/bin/luarocks install image 
 sudo ~/torch/install/bin/luarocks install nngraph
 sudo ~/torch/install/bin/luarocks install optim

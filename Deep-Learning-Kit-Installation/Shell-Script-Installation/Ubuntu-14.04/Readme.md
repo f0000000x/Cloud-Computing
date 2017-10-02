@@ -40,6 +40,9 @@ source /etc/environment
 source ~/.bashrc
 ```
 then to test torch just enter
+```
+sudo ~/torch/install/bin/luarocks install torch 
+```
 
 ```
 th
