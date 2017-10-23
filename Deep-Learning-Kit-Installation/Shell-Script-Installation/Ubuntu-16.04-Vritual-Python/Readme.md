@@ -166,18 +166,21 @@ if you did not get any error then exit out pycharm-communityfrom python env by e
 * Pycharm and ZeroBraneStudio
 
 Note: Mac users need to acivate [Xquartz](https://www.xquartz.org/) in their machine and then open your terminal. In other words, when you are ssh ing to VM use -X as follows:
-````
+
+```
 ssh -X -i <private key file > <netid>@<External Ip address>
 ``` 
+
 Note: Windows users use Mobaexterma and you are fine.
 
 To activate pycharm enter the following commands 
+
 ```
 pycharm-community
 ```
+
 To activate ZeroBraneStudio
+
 ```
 zbstudio
 ```
-
-
