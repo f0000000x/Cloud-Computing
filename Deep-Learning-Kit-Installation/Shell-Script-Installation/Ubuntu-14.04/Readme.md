@@ -23,6 +23,9 @@ cd ~
 ```
 chmod +x install-14-04-final1.sh
 ```
+
+If you are ussing AWS use just ubuntu as net id if you are using GCP use your GWU net id.
+
 ```
 sudo ./install-14-04-final1.sh <netid or username of ssh key>
 ```
@@ -48,8 +51,13 @@ sudo ~/torch/install/bin/luarocks install torch
 th
 ```
 in to your terminal and you should be able to see the torch environment. Now enter 
+
 ```
 require 'dp'
+```
+
+```
+require 'cunn'
 ```
 if torch is is installed correctly then you should be see a long list. Then type
 ```
@@ -59,13 +67,8 @@ and then enter y to get out of the torch env.
 
 * Caffe
 
-Enter the following command on your terminal
-```
-sudo ln /dev/null /dev/raw1394
-```
-```
-sudo rm -rf /dev/raw1394
-```
+Type the following command in your terminal.
+
 ```
 python
 ```
