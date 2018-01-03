@@ -71,6 +71,7 @@ sudo pip install --upgrade pip
 sudo pip install networkx
 sudo pip install seaborn
 sudo pip install cython
+sudo pip install -U scikit-learn
 
 # install packages to zip and unzip files 
 sudo apt-get install -y p7zip-full
@@ -102,7 +103,6 @@ source ~/.bashrc
 # Install the Lua package manager
 sudo apt-get install -y luarocks
 # Install Lua packages in the luarocks directory
-sudo ~/torch/install/bin/luarocks install torch 
 sudo ~/torch/install/bin/luarocks install image 
 sudo ~/torch/install/bin/luarocks install nngraph
 sudo ~/torch/install/bin/luarocks install optim
