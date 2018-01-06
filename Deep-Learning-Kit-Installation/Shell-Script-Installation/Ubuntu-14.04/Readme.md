@@ -2,8 +2,9 @@
 
 ## Getting Started 
 
-To install all the Frameworks (torch, caffe, tensorflow, theano, pytorch), launch your VM  and run the following commands in order in to your VM terminal.
+Vaerion 1: To install all the Frameworks (torch, caffe, tensorflow, theano, pytorch, Keras), launch your VM  and run the following commands in order in to your VM terminal.
 
+Vaerion 2: To install all the Frameworks (torch, caffe, caffe2 tensorflow, theano, pytorch, Keras), launch your VM  and run the following commands in order in to your VM terminal.
 ```
 sudo apt-get install git -y
 ```
@@ -14,20 +15,21 @@ git clone https://github.com/amir-jafari/Cloud-Computing.git
 cd Cloud-Computing/Deep-Learning-Kit-Installation/Shell-Script-Installation/Ubuntu-14.04/
 
 ```
+The latest Version  installation:
 ```
-mv install-14-04-final1.sh ~
+mv install-14-04-final-V2.sh ~
 ```
 ```
 cd ~
 ```
 ```
-chmod +x install-14-04-final1.sh
+chmod +x install-14-04-final-V2.sh
 ```
 
 If you are ussing AWS use just ubuntu as net id if you are using GCP use your GWU net id.
 
 ```
-sudo ./install-14-04-final1.sh <netid or username of ssh key>
+sudo ./install-14-04-final-V2.sh <netid or username of ssh key>
 ```
 
 ## Testing the framworks
@@ -42,30 +44,37 @@ source /etc/environment
 ```
 source ~/.bashrc
 ```
-then to test torch just enter
+then to test torch just enter the following command:
+
 ```
 sudo ~/torch/install/bin/luarocks install torch 
 ```
 
 ```
 th
+
 ```
 in to your terminal and you should be able to see the torch environment. Now enter 
 
 ```
 require 'dp'
+
 ```
+If torch is is installed correctly then you should be see a long list.
+
+If the GPU is intsalled correctly then after entering the following command you sould see the true output.
 
 ```
 require 'cunn'
+
 ```
-if torch is is installed correctly then you should be see a long list. Then type
+
 ```
 exit
 ```
 and then enter y to get out of the torch env.
 
-* Caffe
+* Caffe (Python 2.7)
 
 Type the following command in your terminal.
 
@@ -75,6 +84,19 @@ python
 then in the python env write
 ```
 import caffe
+```
+exit out from python env by exit()
+
+* Caffe2 (Python 2.7 - Just for Version 2 installation)
+
+Type the following command in your terminal.
+
+```
+python
+```
+then in the python env write
+```
+import caffe2
 ```
 exit out from python env by exit()
 
