@@ -256,3 +256,4 @@ python -c 'from caffe2.python import core' 2>/dev/null && echo "Success" || echo
 echo "export PYTHONPATH=/home/$1/caffe2/build" >> ~/.bashrc
 source ~/.bashrc
 python -m caffe2.python.operator_test.relu_op_test
+cd ~
