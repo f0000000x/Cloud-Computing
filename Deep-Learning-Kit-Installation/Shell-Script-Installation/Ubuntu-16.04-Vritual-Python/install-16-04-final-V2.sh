@@ -213,5 +213,48 @@ sudo apt-get -y install python-protobuf
 sudo rm -rf /dev/raw1394
 
 cd ..
+ ----------------- Caffe2 -----------------
+sudo apt-get install -y --no-install-recommends libgflags-dev
+sudo apt-get install -y --no-install-recommends \
+      libgtest-dev \
+      libiomp-dev \
+      libleveldb-dev \
+      liblmdb-dev \
+      libopencv-dev \
+      libopenmpi-dev \
+      libsnappy-dev \
+      openmpi-bin \
+      openmpi-doc \
+      python-pydot
 
+source ~/python2/bin/activate
+
+sudo python -m pip install \
+      flask \
+      future \
+      graphviz \
+      hypothesis \
+      jupyter \
+      matplotlib \
+      pydot python-nvd3 \
+      pyyaml \
+      requests \
+      scikit-image \
+      scipy \
+      setuptools \
+      six \
+      tornado
+deactivate
+
+git clone --recursive https://github.com/caffe2/caffe2.git && cd caffe2
+make && cd build && sudo make install
+python -c 'from caffe2.python import core' 2>/dev/null && echo "Success" || echo "Failure"
+
+# Export the path to .bashrc and source it 
+echo "export PYTHONPATH=/home/$1/caffe2/build" >> ~/.bashrc
+source ~/.bashrc
+source /etc/environment
+python -m caffe2.python.operator_test.relu_op_test
+
+cd ~
 

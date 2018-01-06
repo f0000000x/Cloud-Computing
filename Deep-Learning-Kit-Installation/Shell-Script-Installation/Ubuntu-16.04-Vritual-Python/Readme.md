@@ -2,7 +2,10 @@
 
 ## Getting Started 
 
-To install all the Frameworks (torch, caffe, tensorflow, theano, pytorch), launch your VM  and run the following commands in order in to your VM terminal.
+Vaerion 1: To install all the Frameworks (torch, caffe, tensorflow, theano, pytorch, Keras), launch your VM  and run the following commands in order in to your VM terminal.
+
+Vaerion 2: To install all the Frameworks (torch, caffe, caffe2 tensorflow, theano, pytorch, Keras), launch your VM  and run the following commands in order in to your VM terminal.
+
 
 ```
 sudo apt-get install git -y
@@ -13,17 +16,19 @@ git clone https://github.com/amir-jafari/Cloud-Computing.git
 ```
 cd Cloud-Computing/Deep-Learning-Kit-Installation/Shell-Script-Installation/Ubuntu-16.04-Vritual-Python/
 ```
+We are going to insatll  Version 2 installation:
+
 ```
-mv install-16-04-final.sh ~
+mv install-16-04-final-V2.sh ~
 ```
 ```
 cd ~
 ```
 ```
-chmod +x install-16-04-final.sh
+chmod +x install-16-04-final-V2.sh
 ```
 ```
-sudo ./install-16-04-final.sh <netid or username of ssh key>
+sudo ./install-16-04-final-V2.sh <netid or username of ssh key>
 ```
 
 ## Testing the framworks
@@ -50,13 +55,21 @@ in to your terminal and you should be able to see the torch environment. Now ent
 ```
 require 'dp'
 ```
-if torch is is installed correctly then you should be see a long list. Then type
+If torch is is installed correctly then you should be see a long list.
+
+If the GPU is intsalled correctly then after entering the following command you sould see the true output.
+
+```
+require 'cunn'
+
+```
+
 ```
 exit
 ```
 and then enter y to get out of the torch env.
 
-* Caffe
+* Caffe (Python 2.7)
 
 Enter the following command on your terminal
 ```
@@ -74,7 +87,20 @@ import caffe
 ```
 exit out from python env by exit()
 
-* Tensorflow, Keras, Theano (python 2.7)
+* Caffe2 (Python 2.7 - Just for Version 2 installation)
+
+Type the following command in your terminal.
+
+```
+python
+```
+then in the python env write
+```
+import caffe2
+```
+exit out from python env by exit()
+
+* Tensorflow, Keras, Theano (Virtual Python 2.7)
 
 Enter the following command on your terminal
 ```
@@ -116,7 +142,7 @@ import torchvision
 if you did not get any error then exit out from python env by exit(). 
 
 
-* Tensorflow, Keras, Theano (python 3.5)
+* Tensorflow, Keras, Theano (Virtual python 3.5)
 
 Enter the following command on your terminal
 ```
