@@ -12,7 +12,7 @@ sudo apt-get install git -y
 git clone https://github.com/amir-jafari/Cloud-Computing.git
 ```
 ```
-cd Cloud-Computing/Machine-Learning-Instalaltion/Shell-Script-Installation/Ubuntu-14.04/
+cd Cloud-Computing/ML-Instalaltion/
 
 ```
 We are going to insatll  Version 1 installation:
