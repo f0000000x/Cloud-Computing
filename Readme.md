@@ -9,3 +9,7 @@ This folder contained all the installation manual for most of popular deep learn
 * SSH Key:
 
 This folder contains the guide to create the public and private key.
+
+* Machine Learning Installation:
+
+This folder contained all the installation manual for most of popular R and python packages.
