@@ -251,7 +251,7 @@ make && cd build && sudo make install
 python -c 'from caffe2.python import core' 2>/dev/null && echo "Success" || echo "Failure"
 
 # Export the path to .bashrc and source it 
-echo "export PYTHONPATH=/home/$1/caffe2/build" >> ~/.bashrc
+echo "export PYTHONPATH=/home/$1/caffe/python:/home/$1/caffe2/build" >> ~/.bashrc
 source ~/.bashrc
 source /etc/environment
 python -m caffe2.python.operator_test.relu_op_test
