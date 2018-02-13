@@ -188,12 +188,16 @@ cp Makefile.config.example Makefile.config
 sed -i '/^# USE_CUDNN := 1/s/^# //' Makefile.config
 
 sed -i '/^# WITH_PYTHON_LAYER := 1/s/^# //' Makefile.config
-sed -i 's/\/usr\/local\/cuda/\/usr\/local\/cuda-8.0/g' Makefile.config
+sed -i 's/\/usr\/local\/cuda/\/usr\/local\/cuda-9.0/g' Makefile.config
 sed -i 's/\/usr\/local\/include/\/usr\/local\/include \/usr\/include\/hdf5\/serial/g' Makefile.config
 sed -i '/^PYTHON_INCLUDE/a    /usr/local/lib/python2.7/dist-packages/numpy/core/include/ \\' Makefile.config
 
-sudo ln -s /usr/lib/x86_64-linux-gnu/libhdf5_serial.so.10.1.0 /usr/lib/x86_64-linux-gnu/libhdf5.so
-sudo ln -s /usr/lib/x86_64-linux-gnu/libhdf5_serial_hl.so.10.0.2 /usr/lib/x86_64-linux-gnu/libhdf5_hl.so
+sed -i '/-gencode arch=compute_20,code=sm_20/s/^/#/g' Makefile.config
+sed -i '/-gencode arch=compute_20,code=sm_21/s/^/#/g' Makefile.config
+sed -i '/-gencode arch=compute_30,code=sm_30/s/^/CUDA_ARCH :=  /g' Makefile.config
+
+sudo ln -s libhdf5_serial.so.10.1.0 libhdf5.so
+sudo ln -s libhdf5_serial_hl.so.10.0.2 libhdf5_hl.so
 
 # And finally build!
 make -j 8 all py
