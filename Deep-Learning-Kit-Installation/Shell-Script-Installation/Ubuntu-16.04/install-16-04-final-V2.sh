@@ -19,7 +19,7 @@ wget https://storage.googleapis.com/cuda-deb/cuda-repo-ubuntu1604-9-0-local_9.0.
 
 # ----------------- Cuda -----------------
 sudo dpkg -i cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64.deb
-sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
+sudo apt-key add /var/cuda-repo-9-0-local/7fa2af80.pub
 sudo apt-get update
 sudo apt-get install cuda
 sed 1d /etc/environment > /etc/environment
@@ -120,7 +120,7 @@ sudo dpkg -i pycharm-community_2016.3-mm1_all.deb
 sudo apt install git
 git clone https://github.com/torch/distro.git ~/torch --recursive
 cd ~/torch 
-
+export TORCH_NVCC_FLAGS="-D__CUDA_NO_HALF_OPERATORS__"
 bash install-deps
 
 ./install.sh
