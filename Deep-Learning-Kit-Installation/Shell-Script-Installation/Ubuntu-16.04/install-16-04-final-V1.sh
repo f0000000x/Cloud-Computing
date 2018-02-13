@@ -4,7 +4,7 @@
 # 			Script to set up a Deep Learning VM on Google Cloud Platform			 #
 #           ------------------------------------------------------------			 #
 #Autor:             Amir Jafari, Michael Arango, Prince Birring						 #
-#Date:              09/23/2017						                                 #
+#Date:              02/12/2018						                                 #
 #Organization:      George Washington University                                     #
 # INSTRUCTIONS: When you run this script, make sure you include the username 		 #
 # 				associated with your instance as the first parameter. Otherwise,	 #
@@ -15,21 +15,22 @@ sudo apt update
 sudo apt upgrade -y
 
 sudo apt install chromium-browser -y
-wget https://storage.googleapis.com/cuda-deb/cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb
+wget https://storage.googleapis.com/cuda-deb/cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64.deb
 
 # ----------------- Cuda -----------------
-sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64.deb
+sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
 sudo apt-get update
-sudo apt-get install -y cuda
+sudo apt-get install cuda
 sed 1d /etc/environment > /etc/environment
-echo 'PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/cuda-8.0/bin"' >> /etc/environment
+echo 'PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/cuda-9.0/bin"' >> /etc/environment
 source /etc/environment
 nvcc --version
 nvidia-smi
 
 # ----------------- Cudnn -----------------
-wget https://storage.googleapis.com/cuda-deb/cudnn-8.0-linux-x64-v6.0.tgz
-tar -zxf cudnn-8.0-linux-x64-v6.0.tgz
+wget https://storage.googleapis.com/cuda-deb/cudnn-9.0-linux-x64-v7.tgz
+sudo tar -zxf cudnn-9.0-linux-x64-v7.tgz
 
 cd cuda
 sudo cp lib64/* /usr/local/cuda/lib64/
@@ -128,7 +129,6 @@ cd ..
 source ~/.bashrc
 
 sudo apt-get install -y luarocks
-sudo ~/torch/install/bin/luarocks install torch 
 sudo ~/torch/install/bin/luarocks install image 
 sudo ~/torch/install/bin/luarocks install nngraph
 sudo ~/torch/install/bin/luarocks install optim
@@ -213,48 +213,5 @@ sudo apt-get -y install python-protobuf
 sudo rm -rf /dev/raw1394
 
 cd ..
- ----------------- Caffe2 -----------------
-sudo apt-get install -y --no-install-recommends libgflags-dev
-sudo apt-get install -y --no-install-recommends \
-      libgtest-dev \
-      libiomp-dev \
-      libleveldb-dev \
-      liblmdb-dev \
-      libopencv-dev \
-      libopenmpi-dev \
-      libsnappy-dev \
-      openmpi-bin \
-      openmpi-doc \
-      python-pydot
 
-source ~/python2/bin/activate
-
-sudo python -m pip install \
-      flask \
-      future \
-      graphviz \
-      hypothesis \
-      jupyter \
-      matplotlib \
-      pydot python-nvd3 \
-      pyyaml \
-      requests \
-      scikit-image \
-      scipy \
-      setuptools \
-      six \
-      tornado
-deactivate
-
-git clone --recursive https://github.com/caffe2/caffe2.git && cd caffe2
-make && cd build && sudo make install
-python -c 'from caffe2.python import core' 2>/dev/null && echo "Success" || echo "Failure"
-
-# Export the path to .bashrc and source it 
-echo "export PYTHONPATH=/home/$1/caffe/python:/home/$1/caffe2/build" >> ~/.bashrc
-source ~/.bashrc
-source /etc/environment
-python -m caffe2.python.operator_test.relu_op_test
-
-cd ~
 
