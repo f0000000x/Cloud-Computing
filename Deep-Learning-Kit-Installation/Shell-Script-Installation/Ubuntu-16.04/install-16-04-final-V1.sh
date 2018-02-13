@@ -195,6 +195,9 @@ sed -i '/-gencode arch=compute_20,code=sm_20/s/^/#/g' Makefile.config
 sed -i '/-gencode arch=compute_20,code=sm_21/s/^/#/g' Makefile.config
 sed -i '/-gencode arch=compute_30,code=sm_30/s/^/CUDA_ARCH :=  /g' Makefile.config
 
+sudo sed -i '/LIBRARY_DIRS/s/^/#/g' Makefile.config
+sudo sed -i '/LIBRARY_DIRS/a LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu/hdf5/serial' Makefile.config
+
 sudo ln -s libhdf5_serial.so.10.1.0 libhdf5.so
 sudo ln -s libhdf5_serial_hl.so.10.0.2 libhdf5_hl.so
 
