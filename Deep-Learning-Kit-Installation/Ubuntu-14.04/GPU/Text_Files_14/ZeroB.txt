@@ -1,3 +1,0 @@
-cd Downloads
-chmod +x ZeroBraneStudioEduPack-1.60-linux.sh
-./ZeroBraneStudioEduPack-1.60-linux.sh

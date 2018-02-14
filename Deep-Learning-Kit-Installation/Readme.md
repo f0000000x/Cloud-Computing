@@ -10,11 +10,8 @@ This guide shows you the step by step to create a remote desktop configuration f
 
 This guide shows you the step by step installaling deep learning frameworks using shell script.
 
-* Ubuntu 14.04 instllation:
 
-This guide shows you the step by step installaling deep learning frameworks on ubuntu 14.04 manullay.
+* Ubuntu 16.04 installation:
 
-* Ubuntu 16.04 instllation:
-
-This guide shows you the step by step installaling deep learning frameworks on ubuntu 16.04 manullay.
+This guide shows you the step by step installaling deep learning frameworks on ubuntu 16.04 manually.
 

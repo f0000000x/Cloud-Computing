@@ -1,3 +1,0 @@
-cd Downloads
-th
-dofile 'gputest.lua'

@@ -1,5 +1,5 @@
 cd Downloads
-tar -zxf cudnn-8.0-linux-x64-v6.0.tgz
+sudo tar -zxf cudnn-9.0-linux-x64-v7.tgz
 
 cd cuda
 sudo cp lib64/* /usr/local/cuda/lib64/
