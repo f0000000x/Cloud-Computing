@@ -72,12 +72,7 @@ and then enter y to get out of the torch env.
 * Caffe (Python 2.7)
 
 Enter the following command on your terminal
-```
-sudo ln /dev/null /dev/raw1394
-```
-```
-sudo rm -rf /dev/raw1394
-```
+
 ```
 python
 ```
