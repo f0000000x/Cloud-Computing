@@ -5,7 +5,7 @@
 
 ### First you need to open your computer terminal (Note: NOT THE VM TERMINAL)
 
-*1. Uploading a file:
+* 1. Uploading a file:
 ```
 scp -i "your_aws_key.pem" [file-name] [aws-instance-name]:~/[file-name]
 ```
