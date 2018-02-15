@@ -45,7 +45,6 @@ gsutil cp -r /ajafari/test gs://test_buckect/
 ```
 gsutil cp gs://[BUCKET_NAME]/[OBJECT_NAME] [OBJECT_DESTINATION]
 ```
-NOTE:->  .(dot) - Means current directory
 
 Example:
 ```
