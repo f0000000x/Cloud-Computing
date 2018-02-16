@@ -17,3 +17,7 @@ This folder contained all the installation manual for most of popular R and pyth
 * File Transfer:
 
 This tutorial shows you how to transfer file from AWS and GCP cloud back and forth.
+
+* FAQ:
+
+Answering the frequent questions.
