@@ -21,3 +21,7 @@ This tutorial shows you how to transfer file from AWS and GCP cloud back and for
 * FAQ:
 
 Answering the frequent questions.
+
+* Python editors:
+
+Pycharm configuration and debuggers.
