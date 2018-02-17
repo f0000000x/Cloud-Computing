@@ -2,7 +2,7 @@
 
 1. Git clone the repository 
 ```
-https://github.com/amir-jafari/Cloud-Computing.git
+git clone https://github.com/amir-jafari/Cloud-Computing.git
 ```
 2. Extract the file from repository to your home directory
 ```
