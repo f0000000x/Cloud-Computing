@@ -11,7 +11,7 @@ sudo apt-get update && sudo apt-get upgrade -y
 # Download Anaconda
 wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 # Change the permission to excute the file.
-sudo chmod +x Anaconda3-5.0.1-Linux-x86_64.sh
+chmod +x Anaconda3-5.0.1-Linux-x86_64.sh
 # Run the shell sript
 bash Anaconda-3.5.0.1-Linux-x86_64.sh
 # Run Source .bashrc
