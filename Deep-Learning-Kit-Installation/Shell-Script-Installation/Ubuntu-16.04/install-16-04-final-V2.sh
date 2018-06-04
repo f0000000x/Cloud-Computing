@@ -66,7 +66,8 @@ sudo pip install --upgrade pip
 sudo pip install --upgrade tensorflow-gpu
 sudo pip install Theano
 sudo pip install keras
-sudo pip install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl 
+#sudo pip install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp27-cp27mu-manylinux1_x86_64.whl 
+sudo pip install torch
 sudo pip install torchvision 
 sudo pip install numpy --upgrade
  
@@ -105,11 +106,13 @@ sudo pip3 install keras
 sudo pip3 install protobuf
 sudo pip3 install sklearn
 sudo pip3 install cython
-sudo pip3 install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl 
+#sudo pip3 install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl 
+sudo pip3 install torch 
 sudo pip3 install torchvision
 # deactivate the virtual environment
 deactivate
 
+sudo pip install --upgrade pip
 sudo apt-get install -y p7zip-full
 sudo apt install unzip
 
@@ -265,4 +268,10 @@ source /etc/environment
 python -m caffe2.python.operator_test.relu_op_test
 
 cd ~
+#------------------Forget---------------------------
+sudo pip2 install opencv-python
+sudo pip2 install lmdb
+sudo pip2 install sympy
+sudo pip install sympy
+sudo pip install pydotplus
 
