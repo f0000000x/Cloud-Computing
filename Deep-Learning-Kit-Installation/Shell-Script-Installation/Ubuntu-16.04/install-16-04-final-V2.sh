@@ -1,15 +1,16 @@
 #!/bin/bash
 
-# ---------------------------------------------------------------------------------- #
-# 			Script to set up a Deep Learning VM on Google Cloud Platform			 #
-#           ------------------------------------------------------------			 #
-#Autor:             Amir Jafari, Michael Arango, Prince Birring						 #
-#Date:              02/12/2018						                                 #
-#Organization:      George Washington University                                     #
-# INSTRUCTIONS: When you run this script, make sure you include the username 		 #
-# 				associated with your instance as the first parameter. Otherwise,	 #
-# 				the softwares will not work properly.   							 #
-# ---------------------------------------------------------------------------------- #
+# --------------------------------------------------------------#
+# Script to set up a Deep Learning VM on Google Cloud Platform	#
+#---------------------------------------------------------------#
+#Autor: Amir Jafari, Michael Arango, Prince Birring				#
+#Date: 02/12/2018						                        #
+#Organization:  George Washington University                    #
+# INSTRUCTIONS: When you run this script, make sure you         #
+# include the username associated with your instance as         #
+# the first parameter. Otherwise, the softwares will not        #
+# work properly.   							                    #
+# ------------------------------------------------------------- #
 # ----------------- Browser -----------------
 sudo apt update
 sudo apt upgrade -y
@@ -38,8 +39,8 @@ sudo cp include/* /usr/local/cuda/include/
 
 cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
 cd ..
-# ----------------- Python ----------------------------------------------------
-# ------------- Virtual Environment for Tensorflow - Python 2.7.X -------------
+# ----------------- Python ------------------------------------
+# --- Virtual Environment for Tensorflow - Python 2.7.X -------
 
 # Install libraries needed to make a virtual environment
 sudo apt-get install -y python-pip python-dev python-virtualenv
@@ -74,7 +75,7 @@ sudo pip install numpy --upgrade
 # deactivate the virtual environment
 deactivate
 
-# ------------- Virtual Environment for Tensorflow - Python 3.5.X -------------
+# -- Virtual Environment for Tensorflow - Python 3.5.X -----
 # Install libraries needed to make a virtual environment
 sudo apt-get install -y python3-pip python3-dev python-virtualenv
 # Create a virtual environment, tensorflow3
@@ -117,8 +118,11 @@ sudo apt-get install -y p7zip-full
 sudo apt install unzip
 
 # ----------------- Pycharm -----------------
-wget https://storage.googleapis.com/cuda-deb/pycharm-community_2016.3-mm1_all.deb
-sudo dpkg -i pycharm-community_2016.3-mm1_all.deb
+# wget https://storage.googleapis.com/cuda-deb/pycharm-community_2016.3-mm1_all.deb
+# sudo dpkg -i pycharm-community_2016.3-mm1_all.deb
+wget https://storage.googleapis.com/cuda-deb/pycharm-community_2017.3.4-1_amd64.deb
+sudo dpkg -i pycharm-community_2017.3.4-1_amd64.deb
+
 # ----------------- Torch -----------------
 sudo apt install git
 git clone https://github.com/torch/distro.git ~/torch --recursive
@@ -225,49 +229,49 @@ sudo rm -rf /dev/raw1394
 
 cd ..
  ----------------- Caffe2 -----------------
-sudo apt-get install -y --no-install-recommends libgflags-dev
-sudo apt-get install -y --no-install-recommends \
-      libgtest-dev \
-      libiomp-dev \
-      libleveldb-dev \
-      liblmdb-dev \
-      libopencv-dev \
-      libopenmpi-dev \
-      libsnappy-dev \
-      openmpi-bin \
-      openmpi-doc \
-      python-pydot
-
-source ~/python2/bin/activate
-
-sudo python -m pip install \
-      flask \
-      future \
-      graphviz \
-      hypothesis \
-      jupyter \
-      matplotlib \
-      pydot python-nvd3 \
-      pyyaml \
-      requests \
-      scikit-image \
-      scipy \
-      setuptools \
-      six \
-      tornado
-deactivate
-
-git clone --recursive https://github.com/caffe2/caffe2.git && cd caffe2
-make && cd build && sudo make install
-python -c 'from caffe2.python import core' 2>/dev/null && echo "Success" || echo "Failure"
-
-# Export the path to .bashrc and source it 
-echo "export PYTHONPATH=/home/$1/caffe/python:/home/$1/caffe2/build" >> ~/.bashrc
-source ~/.bashrc
-source /etc/environment
-python -m caffe2.python.operator_test.relu_op_test
-
-cd ~
+#sudo apt-get install -y --no-install-recommends libgflags-dev
+#sudo apt-get install -y --no-install-recommends \
+#      libgtest-dev \
+#      libiomp-dev \
+#      libleveldb-dev \
+#      liblmdb-dev \
+#      libopencv-dev \
+#      libopenmpi-dev \
+#      libsnappy-dev \
+#      openmpi-bin \
+#      openmpi-doc \
+#      python-pydot
+#
+#source ~/python2/bin/activate
+#
+#sudo python -m pip install \
+#      flask \
+#      future \
+#      graphviz \
+#      hypothesis \
+#      jupyter \
+#      matplotlib \
+#      pydot python-nvd3 \
+#      pyyaml \
+#      requests \
+#      scikit-image \
+#      scipy \
+#      setuptools \
+#      six \
+#      tornado
+#deactivate
+#
+#git clone --recursive https://github.com/caffe2/caffe2.git && cd caffe2
+#make && cd build && sudo make install
+#python -c 'from caffe2.python import core' 2>/dev/null && echo "Success" || echo "Failure"
+#
+## Export the path to .bashrc and source it 
+#echo "export PYTHONPATH=/home/$1/caffe/python:/home/$1/caffe2/build" >> ~/.bashrc
+#source ~/.bashrc
+#source /etc/environment
+#python -m caffe2.python.operator_test.relu_op_test
+#
+#cd ~
 #------------------Forget---------------------------
 sudo pip2 install opencv-python
 sudo pip2 install lmdb
