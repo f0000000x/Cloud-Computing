@@ -2,9 +2,9 @@
 
 ## Getting Started 
 
-Version 1: To install all the Frameworks (torch, caffe, tensorflow, theano, pytorch, Keras), launch your VM  and run the following commands in order in to your VM terminal.
+Version 1: To install all the Frameworks (torch, caffe, tensorflow, theano, pytorch, Keras), launch your VM  and run the following commands in order in to your VM terminal (CUDA 8).
 
-Version 2: To install all the Frameworks (torch, caffe, caffe2 tensorflow, theano, pytorch, Keras), launch your VM  and run the following commands in order in to your VM terminal.
+Version 2: To install all the Frameworks (torch, caffe, tensorflow, theano, pytorch, Keras), launch your VM  and run the following commands in order in to your VM terminal (CUDA 9).
 
 
 ```
@@ -79,19 +79,6 @@ python
 then in the python env write
 ```
 import caffe
-```
-exit out from python env by exit()
-
-* Caffe2 (Python 2.7 - Just for Version 2 installation)
-
-Type the following command in your terminal.
-
-```
-python
-```
-then in the python env write
-```
-import caffe2
 ```
 exit out from python env by exit()
 
