@@ -120,9 +120,9 @@ sudo apt install unzip
 # ----------------- Pycharm -----------------
 # wget https://storage.googleapis.com/cuda-deb/pycharm-community_2016.3-mm1_all.deb
 # sudo dpkg -i pycharm-community_2016.3-mm1_all.deb
+
 wget https://storage.googleapis.com/cuda-deb/pycharm-community_2017.3.4-1_amd64.deb
 sudo dpkg -i pycharm-community_2017.3.4-1_amd64.deb
-
 # ----------------- Torch -----------------
 sudo apt install git
 git clone https://github.com/torch/distro.git ~/torch --recursive
