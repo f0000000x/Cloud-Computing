@@ -39,7 +39,7 @@ sudo apt-get install -y python-pip python-dev
 sudo apt-get install -y python-tk
 sudo apt-get install -y python-matplotlib
 sudo apt-get install -y python-pandas
-sudo apt-get install -y python-sklearn
+#sudo apt-get install -y python-sklearn
 sudo apt-get install -y python-skimage
 sudo apt-get install -y python-h5py
 sudo apt-get install -y python-leveldb
@@ -52,6 +52,7 @@ sudo pip install numpy --upgrade
 sudo pip install pydot
 sudo pip install pydotplus
 sudo pip install sympy
+sudo pip install -U scikit-learn
  
 # deactivate the virtual environment
 deactivate
@@ -83,13 +84,14 @@ sudo pip3 install pandas --upgrade
 sudo pip3 install --upgrade numexpr
 sudo pip3 install --upgrade numpy
 sudo pip3 install protobuf
-sudo pip3 install sklearn
+#sudo pip3 install sklearn
+sudo pip3 install -U scikit-learn
 sudo pip3 install cython
 sudo pip3 install pydot
 sudo pip3 install pydotplus
 sudo pip3 install graphviz
 sudo pip3 install sympy
-
+sudo pip3 install opencv-python
 # deactivate the virtual environment
 deactivate
 
@@ -119,6 +121,10 @@ sudo gdebi rstudio-1.0.44-amd64.deb
 
 sudo apt-get install graphviz libgraphviz-dev
 sudo apt-get install pandoc
+
+sudo pip2 install opencv-python
+sudo pip2 install lmdb
+
 
 
 

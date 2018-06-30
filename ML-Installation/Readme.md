@@ -1,4 +1,4 @@
-# Ubuntu 14.04 steps to run the shell script
+# Ubuntu 14.04 or 16.04 steps to run the shell script
 
 ## Getting Started 
 
@@ -16,19 +16,19 @@ cd Cloud-Computing/ML-Instalaltion/
 ```
 We are going to insatll  Version 1 installation:
 ```
-mv install-ML1-14-04-final_V1.sh ~
+mv install-ML1-final_V1.sh ~
 ```
 ```
 cd ~
 ```
 ```
-chmod +x install-ML1-14-04-final_V1.sh
+chmod +x install-ML1-final_V1.sh
 ```
 
 If you are ussing AWS use just ubuntu as net id if you are using GCP use your GWU net id.
 
 ```
-sudo ./install-ML1-14-04-final_V1.sh 
+sudo ./install-ML1-final_V1.sh
 ```
 
 ## Testing the framworks
