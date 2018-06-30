@@ -55,7 +55,7 @@ sudo apt-get install -y python-pip python-dev
 sudo apt-get install -y python-tk
 sudo apt-get install -y python-matplotlib
 sudo apt-get install -y python-pandas
-sudo apt-get install -y python-sklearn
+#sudo apt-get install -y python-sklearn
 sudo apt-get install -y python-skimage
 sudo apt-get install -y python-h5py
 sudo apt-get install -y python-leveldb
@@ -71,6 +71,7 @@ sudo pip install keras
 sudo pip install torch
 sudo pip install torchvision 
 sudo pip install numpy --upgrade
+sudo pip install -U scikit-learn
  
 # deactivate the virtual environment
 deactivate
@@ -110,6 +111,7 @@ sudo pip3 install cython
 #sudo pip3 install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl 
 sudo pip3 install torch 
 sudo pip3 install torchvision
+sudo pip3 install -U scikit-learn
 # deactivate the virtual environment
 deactivate
 
