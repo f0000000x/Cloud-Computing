@@ -11,7 +11,7 @@ sudo apt-get install git -y
 git clone https://github.com/amir-jafari/Cloud-Computing.git
 ```
 ```
-cd Cloud-Computing/ML-Instalaltion/
+cd Cloud-Computing/ML-Installation/
 
 ```
 We are going to insatll  Version 1 installation:
