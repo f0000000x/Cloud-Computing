@@ -4,10 +4,10 @@
 
 
 ##Cloud Side:
-* 1- SSH to the instance.
-* 2- sudo git clone the rep0
-* 3- Change the repo permissions - sudo chmod -R 777 directory
-* 4- export DISPLAY=localhost:10.0
+*1- SSH to the instance.
+*2- sudo git clone the rep0
+*3- Change the repo permissions - sudo chmod -R 777 directory
+*4- export DISPLAY=localhost:10.0
 
 ##Pycharm Side:
 * 1- Create a directory in your computer that you can work on it.
