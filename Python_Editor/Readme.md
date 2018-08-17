@@ -7,7 +7,7 @@
 ```
 sudo chmod -R 777 <name of the directory>
 ```
-4. Set the display:
+4. Set the display (enter the following command into command line):
 ```
 export DISPLAY=localhost:10.0
 ```
