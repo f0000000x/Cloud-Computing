@@ -184,7 +184,7 @@ Note: Windows users use Mobaexterma and you are fine.
 To activate pycharm enter the following commands 
 
 ```
-pycharm-community
+pycharm.sh
 ```
 
 To activate ZeroBraneStudio
