@@ -1,7 +1,4 @@
-# Pycharm Editors
-
-* Pycharm
-
+# Pycharm Editor
 
 ## Cloud Side:
 1. SSH to the instance.
