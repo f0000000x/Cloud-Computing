@@ -8,10 +8,10 @@
 
 2- Open your terminal while the Xquartz is running.
 
-3- Type the following command in your terminal (Please use your GWU net id with out the brackets).
+3- Type the following command in your terminal.
 
 ```
-ssh-keygen -t rsa -f ~/.ssh/gkey -C <Your GW net ID> 
+ssh-keygen -t rsa -f ~/.ssh/gkey -C ubuntu
 ```
 
 4- Hit enter and change your directory.
@@ -41,8 +41,24 @@ cat gkey.pub
 10- Finally, in your terminal while you are in the same directory (/.ssh) enter the follwoing command to connect to your VM that you configured.
 
 ```
-ssh -X -i gkey <Your GWU net ID>@<External IP address from your Dashbaord VMs>
+ssh -X -i gkey ubuntu@<External IP address from your Dashbaord VMs>
 ```
+
+## Possible Errors
+
+Dear Wang,
+
+1. If you get Warning "REMOTE HOST IDENTIFICATIN HAS CHANGED" do the following:
+```
+nano know_hosts 
+```
+
+and the window will open up remove the line which has your ip address that is confilicting (you can delete line by Ctrl+k)
+
+2. Then do Ctrl +x type y and hit enter.
+
+3. Redo the ssh and it should work.
+
 
 * Windows:
 
