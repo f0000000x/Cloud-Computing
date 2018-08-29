@@ -1,7 +1,7 @@
-# Pycharm Editor
+# Pycharm Remote Editor
 
-## Cloud Side:
-1. SSH to the instance.
+## Configuring Cloud Side:
+1. SSH to your instance (AWS or GCP).
 2. sudo git clone <the repo of deep learning>
 3. Change the repo permissions by 
 ```
