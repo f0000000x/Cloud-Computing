@@ -1,8 +1,6 @@
 # SSH Key
 
-## Guide
-
-* Mac Users
+## Mac Users
 
 1. Open your terminal while the Xquartz is running.
 
@@ -42,6 +40,10 @@ cat gkey.pub
 ssh -X -i gkey ubuntu@<External IP address from your Dashbaord VMs>
 ```
 
+## Windows Users
+
+1- Install [puttygen](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+
 ## Possible Errors
 
 1. If you get Warning "REMOTE HOST IDENTIFICATIN HAS CHANGED" do the following:
@@ -56,14 +58,12 @@ nano know_hosts
 4. Redo the ssh and it should work.
 
 
-* Windows:
-
-1- Install [puttygen](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
 
-* Softwares for connection to cloud:
 
-The following software's needs to be installed for connecting local machine to VM that you created in the cloud.
+## Softwares for connection to cloud:
+
+* The following software's needs to be installed for connecting local machine to VM that you created in the cloud.
 
 
 1. Mac users: Install [Xquartz](https://www.xquartz.org/), then reboot your computer.
