@@ -11,7 +11,7 @@ sudo git clone <the repo of deep learning>
 sudo git clone https://github.com/amir-jafari/Machine-Learning.git
 ```
 
-3. Change the repo permissions to full access by 
+3. Change the repo folder permission to full access by 
 
 ```
 sudo chmod -R 777 <name of the directory>
