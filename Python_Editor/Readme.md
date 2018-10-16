@@ -56,7 +56,7 @@ DISPLAY=localhost:10.0
 
 1. For caffe you need add extra environment field: 
 ```
-PYTHONPATH=/home/ajafari/caffe/python
+PYTHONPATH=/home/ubuntu/caffe/python
 ```
 
 
