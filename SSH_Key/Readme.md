@@ -7,7 +7,7 @@
 2. Type the following command in your terminal.
 
 ```
-ssh-keygen -t rsa -f ~/.ssh/gkey -C ubuntu
+ssh-keygen -m PEM -f ~/.ssh/gkey -C ubuntu
 ```
 
 3. Hit enter and change your directory.
