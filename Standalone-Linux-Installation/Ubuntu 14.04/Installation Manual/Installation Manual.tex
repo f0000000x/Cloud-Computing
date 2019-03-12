@@ -3,7 +3,7 @@
 \usepackage{stmaryrd, amsfonts, mathptmx, mathtools, array, siunitx, subfigure, graphicx, listings, etoolbox, mdwlist }
 \usepackage{multirow, indentfirst, cite, verbatim, keyval, textcomp, enumerate, calc, microtype, color,marvosym}
 
-\usepackage[colorlinks,linktocpage,dvips]{hyperref}
+\usepackage[colorlinks,linktocpage]{hyperref}
 \hypersetup{
    colorlinks   = true,                               %Colours links instead of ugly boxes
    urlcolor     = blue,                               %Colour for external hyper links
@@ -84,7 +84,7 @@ Once you have booted in the live USB, you will be presented with option to try o
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{NVIDIA AND CUDA 7.5 INSTALLATION}
+\section{NVIDIA AND CUDA 7.5 INSTALLATION - Non UEFI}
 
 \textbf{Installing CUDA Toolkit 7.5 on Ubuntu 14.04 Linux}
 
@@ -168,6 +168,106 @@ The following explains how to install CUDA Toolkit 7.5 on 64-bit Ubuntu 14.04 Li
 Now, after the system is rebooted you can search the additional driver in the Linux search box (first item in the taskbar) and you should be able to see the manually install driver checked. Also you can see check this command to be sure the GPU is installed correctly.
 
 This following command checks to see if the installation worked properly.
+
+\begin{lstlisting}
+    $ nvidia-smi
+\end{lstlisting}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{NVIDIA AND CUDA 7.5 INSTALLATION - UEFI}
+
+The following explains how to install CUDA Toolkit on 64-bit Ubuntu 14.04 Linux. I have tested it on a self-assembled desktop with NVIDIA Quadroo P5000 graphics card. The instruction assumes you have the necessary CUDA compatible hardware support. Depending on your system configuration, your mileage may vary \cite{NVIDIADRIVER}.
+
+\textbf{Display Driver Installation Download}
+\begin{enumerate}
+  \item One might have installed the driver via apt-get. So before reinstall the driver from runfile, uninstalling previous installations is required. 
+  \item Executing the following scripts carefully one by one.
+\suspend{enumerate}
+
+\begin{lstlisting}
+    $ sudo apt-get purge nvidia*
+\end{lstlisting}
+
+\resume{enumerate}
+    \item The latest NVIDIA driver for Linux OS can be fetched from NVIDIA's official website. The first one in the list, i.e. Latest Long Lived Branch version for Linux x86\_64/AMD64/EM64T, is suitable for most case.
+\suspend{enumerate}
+
+\textbf{CUDA Toolkit and Display Driver Installation}
+
+\resume{enumerate}
+    \item For Ubuntu, installing the following dependencies is enough.
+\suspend{enumerate}
+
+\begin{lstlisting}
+    $ sudo apt-get install build-essential gcc-multilib dkms
+\end{lstlisting}
+
+\textbf{Creat Blacklist for Nouveau Driver}
+
+\resume{enumerate}
+    \item Create a file at /etc/modprobe.d/blacklist-nouveau.conf with the following contents
+    \item blacklist nouveau
+    \item options nouveau modeset=0
+
+\suspend{enumerate}
+
+\begin{lstlisting}
+    $ sudo nano /etc/modprobe.d/blacklist-nouveau.conf
+
+    blacklist nouveau
+    options nouveau modeset=0
+\end{lstlisting}
+
+\resume{enumerate}
+    \item Close the by Ctrl + x
+    \item yes
+\suspend{enumerate}
+
+\begin{lstlisting}
+    $ sudo update-initramfs -u
+    
+    $ sudo reboot
+\end{lstlisting}
+
+\resume{enumerate}
+\item After the computer is rebooted. We need to stop the desktop manager before excuting the runfile to install the driver. lightdm is the default desktop manager in Ubuntu. 
+\item  For Ubuntu 14.04 / 16.04, excuting sudo service lightdm stop (or use gdm or kdm instead of lightdm)
+
+\suspend{enumerate}
+
+\begin{lstlisting}
+    $ cd ~
+    
+    $ chmod +x NVIDIA-Linux-x86_64-384.69.run
+    
+    $ sudo ./NVIDIA-Linux-x86_64-384.69.run 
+
+\end{lstlisting}
+
+\resume{enumerate}
+\item accept EULA ------ accept.
+\item when terminal prompts for yes or no always yes.
+\item when terminal asks for location hit enter (this is the default location)
+\item after the the installation finished, we need to reboot. Do the following commands to reboot.
+\end{enumerate}
+
+\begin{lstlisting}
+    $ sudo reboot
+\end{lstlisting}
+
+\resume{enumerate}
+\item After the computer is rebooted. We need to stop the desktop manager before excuting the runfile to install the driver. lightdm is the default desktop manager in Ubuntu.
+\item  For Ubuntu 14.04 / 16.04, excuting sudo service lightdm stop (or use gdm or kdm instead of lightdm)
+\suspend{enumerate}
+
+\begin{lstlisting}
+    $ sudo service lightdm stop
+\end{lstlisting}
+
+Install the cuda driver by downloading it from the NVIDIA cuda toolkit website. Run the debain file \href{https://developer.nvidia.com/cuda-downloads}{here}. Follow how the installation commands. After your run the cuda then you get some seris of questions for signing the driver. Answer yes to sign the driver and set the password. When the installtion finshed use mok and then provide the same password. by this time you have cuda toolkit and driver installed.
 
 \begin{lstlisting}
     $ nvidia-smi
