@@ -6,13 +6,14 @@
     that you have already connected to through SSH,and then create a new one that happens to have the same connection IP address), what 
 	do I need to do?. (Relevant to Mac users )
 
-	+ Answer: To fix this, you need to open the "known_hosts"  text file in the ~/.ssh directory and delete the entry with the matching IP address. 
-	          You can then connect again.
+	+ Answer: To fix this, you need to open the "known_hosts"  text file in the ~/.ssh directory and delete the 
+	          entry with the matching IP address.You can then connect again.
 	
 2 . IF I get an *Permission denied* error or warning while connecting to your VM what do I need to do?. (Relevant to Mac users and windows users)
 
-	+ Answer: First be sure you did put the public key on the ssh section while creating your instance. Then you need to be sure you used the same 
-	          private key that you created while you used your public key. Second you need to change the mode of public key to read only by enterin
+	+ Answer: First be sure you did put the public key on the ssh section while creating your instance. Then you 
+	          need to be sure you used the same private key that you created while you used your public key. 
+			  Second you need to change the mode of public key to read only by enterin
 			  chmod 400 <your public key name>
 			  
 
@@ -21,9 +22,9 @@
 Pycharm continuously has a background task "connecting to console" or "connecting to <remote host IP>". 
 Under some default settings, PyCharm will select a random port connection and fail.
 
-	    + Answer: Adding a new ingress firewall rule to your VM instance will allow inbound connections to all ports
-           		  on the GCP VM instance.Under your GCP VM instance details, select Network interfaces > Network details > View details.
-				  Next, Select Firewall rules > Create Firewall rule
+	    + Answer: Adding a new ingress firewall rule to your VM instance will allow inbound connections to all 
+		          ports on the GCP VM instance.Under your GCP VM instance details, select 
+				  Network interfaces > Network details > View details. Next, Select Firewall rules > Create Firewall rule
 
 			Firewall Settings
 			
