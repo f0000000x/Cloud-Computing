@@ -19,30 +19,30 @@
 
 
 3. I have a successful Pycharm SFTP connection via GCP, but I am unable to run scripts through my remote machine. 
-Pycharm continuously has a background task "connecting to console" or "connecting to <remote host IP>". 
-Under some default settings, PyCharm will select a random port connection and fail.
+   Pycharm continuously has a background task "connecting to console" or "connecting to <remote host IP>". 
+   Under some default settings, PyCharm will select a random port connection and fail.
 
-	    + Answer: Adding a new ingress firewall rule to your VM instance will allow inbound connections to all 
-		          ports on the GCP VM instance.Under your GCP VM instance details, select 
-				  Network interfaces > Network details > View details. Next, Select Firewall rules > Create Firewall rule
+	+ Answer: Adding a new ingress firewall rule to your VM instance will allow inbound connections to all 
+		      ports on the GCP VM instance.Under your GCP VM instance details, select 
+		      Network interfaces > Network details > View details. Next, Select Firewall rules > Create Firewall rule
 
-			Firewall Settings
-			
-			Logs: off
-			
-			Network:  default
-			
-			Priority:  1000
-			
-			Direction: ingress
-			
-			Action on mathc: allow
-			
-			IP Ranges: 0.0.0.0/0
-			
-			Protocols and ports:  all
-			
-			Enforcement:  enabled
+		Firewall Settings
+		
+		Logs: off
+		
+		Network:  default
+		
+		Priority:  1000
+		
+		Direction: ingress
+		
+		Action on mathc: allow
+		
+		IP Ranges: 0.0.0.0/0
+		
+		Protocols and ports:  all
+		
+		Enforcement:  enabled
 
 Link:  
 
