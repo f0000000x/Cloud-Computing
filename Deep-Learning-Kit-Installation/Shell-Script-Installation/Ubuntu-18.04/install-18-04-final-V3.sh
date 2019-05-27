@@ -33,18 +33,19 @@ wget https://storage.googleapis.com/cuda-deb/libcudnn7-dev_7.5.0.56-1%2Bcuda10.0
 wget https://storage.googleapis.com/cuda-deb/libcudnn7-doc_7.5.0.56-1%2Bcuda10.0_amd64.deb
 wget https://storage.googleapis.com/cuda-deb/libcudnn7_7.5.0.56-1%2Bcuda10.0_amd64.deb
 
-sudo sudo dpkg -i libcudnn7-dev_7.5.0.56-1+cuda10.0_amd64.deb
-sudo dpkg -i libcudnn7-doc_7.5.0.56-1+cuda10.0_amd64.deb
 sudo dpkg -i libcudnn7_7.5.0.56-1+cuda10.0_amd64.deb
+sudo dpkg -i libcudnn7-dev_7.5.0.56-1+cuda10.0_amd64.deb
+sudo dpkg -i libcudnn7-doc_7.5.0.56-1+cuda10.0_amd64.deb
 
-cp -r /usr/src/cudnn_samples_v7/ $HOME
+
+sudo cp -r /usr/src/cudnn_samples_v7/ $HOME
 cd $HOME/cudnn_samples_v7/mnistCUDNN
-make clean && make
+sudo make
 ./mnistCUDNN
 cd ~
 # ----------------- Python 3.6 ------------------------------------
 sudo apt install -y python3-pip
-sudo apt install build-essential libssl-dev libffi-dev python3-dev
+sudo apt install build-essential libssl-dev libffi-dev python3-dev -y
 sudo pip3 install --upgrade pip
 sudo -H pip3 install matplotlib
 sudo -H pip3 install pandas
