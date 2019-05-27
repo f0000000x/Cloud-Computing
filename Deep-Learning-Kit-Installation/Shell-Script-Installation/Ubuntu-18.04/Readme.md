@@ -34,6 +34,10 @@ sudo ./install-18-04-final-V3.sh
 
 * Test
 
+Chnage directory by
+```
+cd /home/ubuntu/Cloud-Computing/Deep-Learning-Kit-Installation/Shell-Script-Installation/Ubuntu-18.04
+```
 Run the test.py and check the frameworks.
 
 ```
