@@ -1,6 +1,11 @@
 print(20*'-'+'Checking Deep Learning Frameworks'+20*'-')
 import os
 print(20*'-'+'Nvidia Cuda'+20*'-')
+os.system("source /etc/environment")
+os.system("source ~/.bashrc")
+
+
+
 os.system("nvidia-smi")
 print(20*'.'+20*'.'+20*'.')
 os.system("nvcc --version")
