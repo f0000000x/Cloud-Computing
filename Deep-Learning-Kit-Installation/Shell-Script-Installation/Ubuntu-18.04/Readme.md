@@ -98,7 +98,16 @@ To activate pycharm enter the following commands
 ```
 * Test
 
-Chnage directory by
+Run the following commands
+
+```
+source /etc/environment
+```
+```
+source ~/.bashrc
+```
+
+Change directory by
 ```
 cd /home/ubuntu/Cloud-Computing/Deep-Learning-Kit-Installation/Shell-Script-Installation/Ubuntu-18.04
 ```
