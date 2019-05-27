@@ -46,6 +46,7 @@ cd ~
 # ----------------- Python 3.6 ------------------------------------
 sudo apt install -y python3-pip
 sudo apt install build-essential libssl-dev libffi-dev python3-dev -y
+sudo apt-get install tcl-dev tk-dev python-tk python3-tk -y
 sudo pip3 install --upgrade pip
 sudo -H pip3 install matplotlib
 sudo -H pip3 install pandas
