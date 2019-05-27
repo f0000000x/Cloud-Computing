@@ -32,6 +32,14 @@ sudo ./install-18-04-final-V3.sh
 
 ## Testing the framworks
 
+* Test
+
+Run the test.py and check the frameworks.
+
+```
+python3 test.py
+```
+
 * Set Environment
 
 Run the following commands
