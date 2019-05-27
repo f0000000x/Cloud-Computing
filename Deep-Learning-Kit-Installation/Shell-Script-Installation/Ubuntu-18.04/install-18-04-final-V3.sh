@@ -25,7 +25,6 @@ sudo apt-get install cuda -y
 sed 1d /etc/environment > /etc/environment
 echo 'PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/cuda-10.0/bin"' >> /etc/environment
 source /etc/environment
-nvcc --version
 nvidia-smi
 
 # ----------------- Cudnn 7.6 -----------------
@@ -66,8 +65,12 @@ sudo -H pip3 install sympy
 sudo -H pip3 install pydotplus
 sudo apt-get install -y p7zip-full
 sudo apt install unzip
+sudo -H pip3 install gpustat
 
 # ----------------- Pycharm 2019 -----------------
 wget https://storage.googleapis.com/cuda-deb/pycharm-community-2019.1.2.tar.gz
 sudo tar -zxf pycharm-community-2019.1.2.tar.gz
 sudo ln -s /home/ubuntu/pycharm-community-2019.1.2/bin/pycharm.sh pycharm
+
+
+sudo apt-get install -y stress htop iotop lm-sensors
