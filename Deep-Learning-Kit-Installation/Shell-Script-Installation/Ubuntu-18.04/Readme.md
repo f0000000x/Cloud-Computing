@@ -32,18 +32,6 @@ sudo ./install-18-04-final-V3.sh
 
 ## Testing the framworks
 
-* Test
-
-Chnage directory by
-```
-cd /home/ubuntu/Cloud-Computing/Deep-Learning-Kit-Installation/Shell-Script-Installation/Ubuntu-18.04
-```
-Run the test.py and check the frameworks.
-
-```
-python3 test.py
-```
-
 * Set Environment
 
 Run the following commands
@@ -107,5 +95,16 @@ To activate pycharm enter the following commands
 
 ```
 ./pycharm.sh
+```
+* Test
+
+Chnage directory by
+```
+cd /home/ubuntu/Cloud-Computing/Deep-Learning-Kit-Installation/Shell-Script-Installation/Ubuntu-18.04
+```
+Run the test.py and check the frameworks.
+
+```
+python3 test.py
 ```
 
