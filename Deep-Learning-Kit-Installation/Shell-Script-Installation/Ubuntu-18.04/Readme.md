@@ -96,7 +96,7 @@ To activate pycharm enter the following commands
 ```
 ./pycharm.sh
 ```
-* Test
+* Testing by python file:
 
 Run the following commands
 
