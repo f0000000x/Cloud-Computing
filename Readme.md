@@ -22,7 +22,7 @@ This tutorial shows you how to transfer file from AWS and GCP cloud back and for
 
 Answering the frequent questions.
 
-* Python editors:
+* Python editor:
 
 Pycharm configuration and debuggers.
 
