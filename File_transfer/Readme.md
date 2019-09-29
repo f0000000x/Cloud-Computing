@@ -1,4 +1,4 @@
-# Transfering Files 
+# Transfering Files Using Command Lines
 
 ## Transferring Files in Amazon Web Services (AWS)
 
@@ -32,7 +32,7 @@ scp -i ~/Documents.aws.pem ubuntu@ec2-52-207-225-47.compute-1.amazonaws.com:~/ir
 ### First you need to open your GCP VM terminal (Note: NOT YOUR COMPUTER TERMINAL)
 Note: You need to open your GCP dashboard and navigate to storage. Then create a bucket and name it. Here I created a test_bucket for this example:
 
-*1. Uploading a file:
+* 1. Uploading a file:
 ```
 gsutil cp [LOCAL_OBJECT_LOCATION] gs://[DESTINATION_BUCKET_NAME]/
 ```
@@ -49,5 +49,13 @@ gsutil cp gs://[BUCKET_NAME]/[OBJECT_NAME] [OBJECT_DESTINATION]
 Example:
 ```
 gsutil cp -r gs://test_buckect/amir.txt /home/ajafari/amir
+
 ```
+# Transfering Files Using GUI Amazon Web Services (AWS) and Google Cloud Platform (GCP)
+
+
+* 1. For Windows users you can use Mobaxterm and use SFTP option.
+* 2. For Mac users you can use Filezila and use SFTP option.
+
+
 
