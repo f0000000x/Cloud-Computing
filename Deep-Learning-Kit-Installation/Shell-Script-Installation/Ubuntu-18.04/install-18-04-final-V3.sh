@@ -53,7 +53,7 @@ sudo -H pip3 install pandas
 sudo -H pip3 install h5py
 sudo -H pip3 install leveldb
 sudo -H pip3 install seaborn
-sudo -H pip3 install --upgrade tensorflow-gpu
+sudo -H pip3 install tensorflow-gpu
 sudo -H pip3 install Theano 
 sudo -H pip3 install keras
 sudo -H pip3 install sklearn
