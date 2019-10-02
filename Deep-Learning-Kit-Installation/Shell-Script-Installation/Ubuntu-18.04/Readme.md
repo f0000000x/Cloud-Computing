@@ -2,7 +2,7 @@
 
 ## Getting Started 
 
-Version 3: To install all the Frameworks (tensorflow, theano, pytorch, Keras), launch your VM  and run the following commands in order in to your VM terminal (CUDA 8).
+Version 3: To install all the Frameworks (tensorflow, theano, pytorch, Keras), launch your VM  and run the following commands in order in to your VM terminal (CUDA 10.1).
 
 
 
