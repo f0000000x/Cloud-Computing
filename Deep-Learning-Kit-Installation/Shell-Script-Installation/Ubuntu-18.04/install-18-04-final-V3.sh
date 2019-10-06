@@ -14,6 +14,7 @@
 # ----------------- Browser ------------------
 sudo apt update
 sudo apt upgrade -y
+sudo apt install nano
 # ----------------- Chromium-------------------
 sudo apt install chromium-browser -y
 # ----------------- Cuda 10.0 -----------------
