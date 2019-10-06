@@ -7,7 +7,7 @@ Version 3: To install all the Frameworks (tensorflow, theano, pytorch, Keras), l
 
 
 ```
-sudo apt-get install git -y
+sudo apt install git -y
 ```
 ```
 git clone https://github.com/amir-jafari/Cloud-Computing.git
