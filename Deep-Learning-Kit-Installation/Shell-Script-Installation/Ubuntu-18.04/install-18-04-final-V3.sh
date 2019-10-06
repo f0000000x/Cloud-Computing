@@ -38,7 +38,7 @@ sudo apt-key add /var/cuda-repo-10-1-local-10.1.243-418.87.00/7fa2af80.pub
 sudo apt-get update
 sudo apt-get -y install cuda
 sed 1d /etc/environment > /etc/environment
-echo 'PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/cuda-10.0/bin"' >> /etc/environment
+echo 'PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/cuda-10.1/bin"' >> /etc/environment
 source /etc/environment
 nvcc --version
 nvidia-smi
