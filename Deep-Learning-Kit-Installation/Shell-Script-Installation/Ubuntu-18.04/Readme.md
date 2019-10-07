@@ -2,7 +2,7 @@
 
 ## Getting Started 
 
-Version 3: To install all the Frameworks (tensorflow, theano, pytorch, Keras), launch your VM  and run the following commands in order in to your VM terminal (CUDA 10.1).
+Version 3: To install all the Frameworks (tensorflow, theano, pytorch, Keras), launch your VM  and run the following commands in order in to your VM terminal (CUDA 10.0 and cudnn 7.6).
 
 
 
@@ -35,6 +35,10 @@ sudo ./install-18-04-final-V3.sh
 * Set Environment
 
 Run the following commands
+```
+source nano /etc/environment
+```
+add :/usr/local/cuda-10.0/bin at the end of line before quoat. Then close and save the file.
 
 ```
 source /etc/environment

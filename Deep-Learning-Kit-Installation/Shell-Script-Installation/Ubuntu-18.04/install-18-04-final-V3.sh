@@ -18,31 +18,32 @@ sudo apt install nano
 # ----------------- Chromium-------------------
 sudo apt install chromium-browser -y
 # ----------------- Cuda 10.0 -----------------
-#wget https://storage.googleapis.com/cuda-deb/cuda-repo-ubuntu1804-10-0-local-10.0.130-410.48_1.0-1_amd64.deb
-#sudo dpkg -i cuda-repo-ubuntu1804-10-0-local-10.0.130-410.48_1.0-1_amd64.deb
-#sudo apt-key add /var/cuda-repo-10-0-local-10.0.130-410.48/7fa2af80.pub
-#sudo apt-get update
-#sudo apt-get install cuda -y
-#sed 1d /etc/environment > /etc/environment
-#echo 'PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/cuda-10.0/bin"' >> /etc/environment
-#source /etc/environment
-#nvcc --version
-#nvidia-smi
-# ----------------- Cuda 10.1 -----------------
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
-#wget https://storage.googleapis.com/cuda-deb/cuda-ubuntu1804.pin
-sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
-wget http://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda-repo-ubuntu1804-10-1-local-10.1.243-418.87.00_1.0-1_amd64.deb
-# wget https://storage.googleapis.com/cuda-deb/cuda-repo-ubuntu1804-10-1-local-10.1.243-418.87.00_1.0-1_amd64.deb
-sudo dpkg -i cuda-repo-ubuntu1804-10-1-local-10.1.243-418.87.00_1.0-1_amd64.deb
-sudo apt-key add /var/cuda-repo-10-1-local-10.1.243-418.87.00/7fa2af80.pub
+wget https://storage.googleapis.com/cuda-deb/cuda-repo-ubuntu1804-10-0-local-10.0.130-410.48_1.0-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1804-10-0-local-10.0.130-410.48_1.0-1_amd64.deb
+sudo apt-key add /var/cuda-repo-10-0-local-10.0.130-410.48/7fa2af80.pub
 sudo apt-get update
-sudo apt-get -y install cuda
-sed 1d /etc/environment > /etc/environment
-echo 'PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/cuda-10.1/bin"' >> /etc/environment
+sudo apt-get install cuda -y
+sudo chmod +x /etc/environment
+sudo sed 1d /etc/environment > /etc/environment
+echo 'PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/cuda-10.0/bin"' >> /etc/environment
 source /etc/environment
 nvcc --version
 nvidia-smi
+# ----------------- Cuda 10.1 -----------------
+#wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
+##wget https://storage.googleapis.com/cuda-deb/cuda-ubuntu1804.pin
+#sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
+#wget http://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda-repo-ubuntu1804-10-1-local-10.1.243-418.87.00_1.0-1_amd64.deb
+## wget https://storage.googleapis.com/cuda-deb/cuda-repo-ubuntu1804-10-1-local-10.1.243-418.87.00_1.0-1_amd64.deb
+#sudo dpkg -i cuda-repo-ubuntu1804-10-1-local-10.1.243-418.87.00_1.0-1_amd64.deb
+#sudo apt-key add /var/cuda-repo-10-1-local-10.1.243-418.87.00/7fa2af80.pub
+#sudo apt-get update
+#sudo apt-get -y install cuda
+#sed 1d /etc/environment > /etc/environment
+#echo 'PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/cuda-10.1/bin"' >> /etc/environment
+#source /etc/environment
+#nvcc --version
+#nvidia-smi
 
 # ----------------- Cudnn 7.5 -----------------
 #wget https://storage.googleapis.com/cuda-deb/libcudnn7-dev_7.5.0.56-1%2Bcuda10.0_amd64.deb
@@ -53,15 +54,23 @@ nvidia-smi
 #sudo dpkg -i libcudnn7_7.5.0.56-1+cuda10.0_amd64.deb
 #sudo dpkg -i libcudnn7-dev_7.5.0.56-1+cuda10.0_amd64.deb
 #sudo dpkg -i libcudnn7-doc_7.5.0.56-1+cuda10.0_amd64.deb
-# ----------------- Cudnn 7.6 -----------------
-wget https://storage.googleapis.com/cuda-deb/libcudnn7_7.6.4.38-1%2Bcuda10.1_amd64.deb
-wget https://storage.googleapis.com/cuda-deb/libcudnn7-doc_7.6.4.38-1%2Bcuda10.1_amd64.deb
-wget https://storage.googleapis.com/cuda-deb/libcudnn7-dev_7.6.4.38-1%2Bcuda10.1_amd64.deb
+# ----------------- Cudnn 7.6 cuda 10.1-----------------
+#wget https://storage.googleapis.com/cuda-deb/libcudnn7_7.6.4.38-1%2Bcuda10.1_amd64.deb
+#wget https://storage.googleapis.com/cuda-deb/libcudnn7-doc_7.6.4.38-1%2Bcuda10.1_amd64.deb
+#wget https://storage.googleapis.com/cuda-deb/libcudnn7-dev_7.6.4.38-1%2Bcuda10.1_amd64.deb
 
-sudo dpkg -i libcudnn7_7.6.4.38-1+cuda10.1_amd64.deb
-sudo dpkg -i libcudnn7-dev_7.6.4.38-1+cuda10.1_amd64.deb
-sudo dpkg -i libcudnn7-doc_7.6.4.38-1+cuda10.1_amd64.deb 
+#sudo dpkg -i libcudnn7_7.6.4.38-1+cuda10.1_amd64.deb
+#sudo dpkg -i libcudnn7-dev_7.6.4.38-1+cuda10.1_amd64.deb
+#sudo dpkg -i libcudnn7-doc_7.6.4.38-1+cuda10.1_amd64.deb 
 
+# ----------------- Cudnn 7.6 cuda 10.0-----------------
+wget https://storage.googleapis.com/cuda-deb/libcudnn7-dev_7.6.4.38-1%2Bcuda10.0_amd64.deb
+wget https://storage.googleapis.com/cuda-deb/libcudnn7-doc_7.6.4.38-1%2Bcuda10.0_amd64.deb
+wget https://storage.googleapis.com/cuda-deb/libcudnn7_7.6.4.38-1%2Bcuda10.0_amd64.deb
+
+sudo dpkg -i libcudnn7_7.6.4.38-1+cuda10.0_amd64.deb
+sudo dpkg -i libcudnn7-dev_7.6.4.38-1+cuda10.0_amd64.deb
+sudo dpkg -i libcudnn7-doc_7.6.4.38-1+cuda10.0_amd64.deb 
 
 
 
