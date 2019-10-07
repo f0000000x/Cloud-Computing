@@ -35,10 +35,6 @@ sudo ./install-18-04-final-V3.sh
 * Set Environment
 
 Run the following commands
-```
-source nano /etc/environment
-```
-add :/usr/local/cuda-10.0/bin at the end of line before quoat. Then close and save the file.
 
 ```
 source /etc/environment
