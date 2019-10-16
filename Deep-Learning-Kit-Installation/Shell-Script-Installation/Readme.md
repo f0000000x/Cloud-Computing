@@ -23,7 +23,24 @@ All the deep learning frame works are installed in python 3.6
 CUDA 10.0
 cuddnn 7.5
 
-Tensorflow in 3.5
+Tensorflow in Python 3.5
+Theano in Python 3.5
+Pytorch in Python 3.5
+Kerasin Python 3.5
+
+Pycharm 2019.1.2
+
+
+Check the test.py file to make sure everything is installed.
+
+* Debian 9 Python 3.6:
+
+All the deep learning frame works are installed in python 3.6
+
+CUDA 10.0
+cuddnn 7.5
+
+Tensorflow in Python 3.5
 Theano in Python 3.5
 Pytorch in Python 3.5
 Kerasin Python 3.5
