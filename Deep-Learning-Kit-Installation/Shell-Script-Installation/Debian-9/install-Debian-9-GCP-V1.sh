@@ -69,6 +69,7 @@ sudo apt-get install xauth
 sudo apt install gedit
 sudo apt update
 
+sudo rm -r /usr/local/cuda-10.0/lib64/libcudnn*
 
 
 
