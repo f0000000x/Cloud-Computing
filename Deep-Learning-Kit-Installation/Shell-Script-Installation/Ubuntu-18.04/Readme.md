@@ -43,7 +43,7 @@ source /etc/environment
 source ~/.bashrc
 ```
 
-* Tensorflow, Keras, Theano (Virtual Python 2.7)
+* Tensorflow, Keras, Theano (Virtual Python 3)
 
 Enter the following command on your terminal
 
@@ -68,7 +68,7 @@ if you did not get any error then exit out from python by exit().
 
 Enter the following command on your terminal
 ```
-python
+python3
 ```
 then in the python env write
 ```
