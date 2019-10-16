@@ -36,7 +36,6 @@ sudo ./install-Debian-9-GCP-V1.sh
 
 Run the following commands
 
-```
 
 * Tensorflow, Keras, Theano (Virtual Python 3)
 
@@ -139,7 +138,7 @@ sudo ./install-Debian-9-final-V1.sh
 
 Run the following commands
 
-```
+
 
 * Tensorflow, Keras, Theano (Virtual Python 3)
 
