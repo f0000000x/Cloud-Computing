@@ -100,7 +100,7 @@ cd /home/ubuntu/Cloud-Computing/Deep-Learning-Kit-Installation/Shell-Script-Inst
 Run the test.py and check the frameworks.
 
 ```
-python3 test.py
+python3 test_GCP.py
 ```
 ## Option2
 
