@@ -55,6 +55,11 @@ sudo apt-get install -y p7zip-full
 sudo apt install unzip
 sudo -H pip3 install gpustat
 
+sudo -H pip3 install xlrd
+sudo -H pip3 install sacred
+sudo -H pip3 install pymongo
+sudo -H pip3 install openpyxl
+
 # ----------------- Pycharm 2019 -----------------
 wget https://storage.googleapis.com/cuda-deb/pycharm-community-2019.1.2.tar.gz
 sudo tar -zxf pycharm-community-2019.1.2.tar.gz
