@@ -19,6 +19,9 @@ We are going to install Version 3:
 mv install-18-04-part1-V1.sh ~
 ```
 ```
+mv install-18-04-part2-V1.sh ~
+```
+```
 cd ~
 ```
 ```
