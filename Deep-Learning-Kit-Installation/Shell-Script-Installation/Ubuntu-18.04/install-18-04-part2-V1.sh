@@ -68,12 +68,10 @@ sudo -H pip3 install openpyxl
 sudo -H pip3 install tqdm
 
 sudo -H pip3 install nltk
-sudo -H pip3 install pyodbc
 sudo -H pip3 install pyspellchecker
 sudo -H pip3 install -U spacy
 sudo -H pip3 install textacy
 sudo -H pip3 install pymongo
-sudo -H pip3 install language-check
 sudo -H pip3 install joblib
 
 
