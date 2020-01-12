@@ -2,7 +2,7 @@
 
 ## Getting Started - Option 1
 Latest Version: To install all the Frameworks (tensorflow, theano, pytorch, Keras), launch your VM  and run the following commands in order in to your VM terminal 
-Cuda 10.1 Cudnn 7.6
+Cuda 10.0 Cudnn 7.6
 
 ```
 sudo apt install git -y
@@ -16,29 +16,29 @@ cd Cloud-Computing/Deep-Learning-Kit-Installation/Shell-Script-Installation/Ubun
 We are going to install Version 3:
 
 ```
-mv install-18-04-part1-V2.sh ~
+mv install-18-04-part1-V1.sh ~
 ```
 ```
-mv install-18-04-part2-V2.sh ~
+mv install-18-04-part2-V1.sh ~
 ```
 ```
 cd ~
 ```
 ```
-chmod +x install-18-04-part1-V2.sh
+chmod +x install-18-04-part1-V1.sh
 ```
 ```
-sudo ./install-18-04-part1-V2.sh
+sudo ./install-18-04-part1-V1.sh
 ```
-By this time you should have CUDA 10.1 installed correctly. Your VM will be rebooted, wait and reconnect.
+By this time you should have CUDA 10.0 installed correctly. Your VM will be rebooted, wait and reconnect.
 
-Now lets install cudnn 7.6 for CUDA 10.1 and all the softwares.
+Now lets install cudnn 7.6 for CUDA 10 and all the softwares.
 
 ```
-chmod +x install-18-04-part2-V2.sh
+chmod +x install-18-04-part2-V1.sh
 ```
 ```
-sudo ./install-18-04-part2-V2.sh
+sudo ./install-18-04-part2-V1.sh
 ```
 
 
