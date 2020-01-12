@@ -1,15 +1,5 @@
 #!/bin/bash
 
-# ----------------- Cudnn 7.5 CUDA 10-----------------
-#wget https://storage.googleapis.com/cuda-deb/libcudnn7-dev_7.5.0.56-1%2Bcuda10.0_amd64.deb
-#wget https://storage.googleapis.com/cuda-deb/libcudnn7-doc_7.5.0.56-1%2Bcuda10.0_amd64.deb
-#wget https://storage.googleapis.com/cuda-deb/libcudnn7_7.5.0.56-1%2Bcuda10.0_amd64.deb
-
-
-#sudo dpkg -i libcudnn7_7.5.0.56-1+cuda10.0_amd64.deb
-#sudo dpkg -i libcudnn7-dev_7.5.0.56-1+cuda10.0_amd64.deb
-#sudo dpkg -i libcudnn7-doc_7.5.0.56-1+cuda10.0_amd64.deb
-
 # ----------------- Cudnn 7.6 cuda 10.1-----------------
 wget https://storage.googleapis.com/cuda-deb/libcudnn7_7.6.4.38-1%2Bcuda10.1_amd64.deb
 wget https://storage.googleapis.com/cuda-deb/libcudnn7-doc_7.6.4.38-1%2Bcuda10.1_amd64.deb
@@ -18,18 +8,11 @@ wget https://storage.googleapis.com/cuda-deb/libcudnn7-dev_7.6.4.38-1%2Bcuda10.1
 sudo dpkg -i libcudnn7_7.6.4.38-1+cuda10.1_amd64.deb
 sudo dpkg -i libcudnn7-dev_7.6.4.38-1+cuda10.1_amd64.deb
 sudo dpkg -i libcudnn7-doc_7.6.4.38-1+cuda10.1_amd64.deb 
+
 # -----------------TEST cuda 10.0-----------------
 cat /proc/driver/nvidia/version
 nvcc --version
 nvidia-smi
-
-# ----------------- Cudnn 7.6 cuda 10.0-----------------
-#wget https://storage.googleapis.com/cuda-deb/libcudnn7-dev_7.6.4.38-1%2Bcuda10.0_amd64.deb
-#wget https://storage.googleapis.com/cuda-deb/libcudnn7-doc_7.6.4.38-1%2Bcuda10.0_amd64.deb
-#wget https://storage.googleapis.com/cuda-deb/libcudnn7_7.6.4.38-1%2Bcuda10.0_amd64.deb
-#sudo dpkg -i libcudnn7_7.6.4.38-1+cuda10.0_amd64.deb
-#sudo dpkg -i libcudnn7-dev_7.6.4.38-1+cuda10.0_amd64.deb
-#sudo dpkg -i libcudnn7-doc_7.6.4.38-1+cuda10.0_amd64.deb
 
 # ----------------- TESTC Cudnn 7.6-----------------
 sudo cp -r /usr/src/cudnn_samples_v7/ $HOME
